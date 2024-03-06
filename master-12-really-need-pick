@@ -1,526 +1,3 @@
-01726bc97785f6e66d6d882bf2b81077391603c5 [riscv] Fix build due to INT16_MAX issue
-6a5cdb0e9e1294a72f3be8237f8e48c86c8b8dba re PR middle-end/79454 (c-c++-common/ubsan/overflow-vec-*.c FAILs on some 64-bit BE targets)
-03108bad95b96d9dad75dc99482d652ea9a749c5 [PR 79579] Avoid segfault on NULL ipa_edge_args_vector
-86cd0334f35362b1d8b2f66be156bf34eeadf785 [PR 78140] Reuse same IPA bits and VR info
-918112d378787a2227f61225098289a14b1ccd22 Fix *_CST ICEs connected to MPX.
-8d44cf7275527abc86f33e6d6c51fc84fa9c877a tree-vect-data-refs.c (Operator==, [...]): Move from ...
-9cbd2d979c5e7095530a6fc290615847d31b549d * tree-vect-loop-manip.c (create_intersect_range_checks_index) 	(create_intersect_range_checks): Move from ... 	* tree-data-ref.c (create_intersect_range_checks_index) 	(create_intersect_range_checks): ... to here. 	(create_runtime_alias_checks): New function factored from ... 	* tree-vect-loop-manip.c (vect_create_cond_for_alias_checks): ... 	here.  Call above function. 	* tree-data-ref.h (create_runtime_alias_checks): New function.
-7d594224c2375ae5b067b727a46c42b6ddc86de2 stl_bvector.h (__fill_bvector(_Bit_type*, unsigned int, unsigned int, bool)): Change signature.
-5ea71a5a7c9f25a7539bdc8c5ed7a92bf2e2115c re PR tree-optimization/81510 (ice in operator[],  at vec.h:749)
-0919ce3efe2a0d6a20cb726feabe26dc3503db43 [Patch (preapproved)] Guard Copy Header pass on
-9811e84c99df6269baa406c7f42d479b342087c4 re PR middle-end/81502 (In some cases the data is moved to memory unnecessarily [partial regression])
-92e29a5e86c8adc88ee17a483d7284d7bb9e090c re PR middle-end/81502 (In some cases the data is moved to memory unnecessarily [partial regression])
-0d4a1197ba24d4f95b5c5f1face695806075a0c6 [1/77] Add an E_ prefix to mode names
-4e10a5a74b2571a72ab944195267334d56b9534b [2/77] Add an E_ prefix to case statements
-c94843d2422bdf77e2f86fad0329838f36773b43 [4/77] Add FOR_EACH iterators for modes
-490d0f6c91c0c4fef57a5ffe438629b0687113de [6/77] Make GET_MODE_WIDER return an opt_mode
-b5f2d801b10c25ef32a80c03d6df8668920a593c [9/77] Add SCALAR_FLOAT_TYPE_MODE
-fffbab82e7fd15ef695159746a0ce7b9ac906778 [17/77] Add an int_mode_for_size helper function
-304b9962830476dce3fe7632713e5f5ce002c050 [18/77] Make int_mode_for_mode return an opt_scalar_int_mode
-b4206259f10455603e0c90825566de1ea777c04a [20/77] Replace MODE_INT checks with is_int_mode
-45e8e706e295e7770d02c6d9c9798f4bab7ab524 [22/77] Replace !VECTOR_MODE_P with is_a <scalar_int_mode>
-7c61657f68cc45bdbbfcfd762dbfd7021f3acb3f [25/77] Use is_a <scalar_int_mode> for bitmask optimisations
-6b9c3decc38f6f852adf16951b9b1b043112cd1c [26/77] Use is_a <scalar_int_mode> in subreg/extract simplifications
-c7ad039d8d75666f4f188a913033da36206503b8 [35/77] Add uses of as_a <scalar_int_mode>
-e3731c52cf1b60d90f27f81ff0d1e2ad164fed07 [42/77] Use scalar_int_mode in simplify_shift_const_1
-22527b59dbb10204626aeb8660a8e262377ac354 [47/77] Make subroutines of nonzero_bits operate on scalar_int_mode
-3c84109eae52da59c09e8a91bfb5e79bd0527809 [54/77] Add explicit int checks for alternative optab implementations
-b397965cae46d88d4c274fb2ecdde9a4714a4e6a [65/77] Add a SCALAR_TYPE_MODE macro
-db61b7f923b769142156eab047c94b04bb7adaae [66/77] Use scalar_mode for constant integers
-3bd8f4816fe24ef00641cde33dd13155b83db6e1 [68/77] Use scalar_mode for is_int_mode/is_float_mode pairs
-16d2200070f49ed71053b81699e37bd539a0ee69 [71/77] Use opt_scalar_mode for mode iterators
-18e2a8b889d520fc3598f74e39e1dbf1ef06ebd1 [72/77] Pass scalar_mode to scalar_mode_supported_p
-79d22165ea45e89283ccf147d65cbf66548838da [74/77] Various small scalar_mode changes
-edcc77dbd9f95301a8be1a2f2b0d774680b46a1a Make-lang.in, [...]: Find runtime source in libgnat/
-e7c45b6600acfdc0930b980a45a364f77844139a Add gimple_build_vector* helpers
-ac8936b4677fa10b676e5b12aa682b9d2d42c1e5 Fix an SVE failure in the Fortran matmul* tests
-9c53f040cb3c3bc0b86f702af5bd73d904d6cf0f [BRIGFE] Fix (more) crash with calls with more than 4 args.
-caf1c1cd1253a847644744e3d6df3f98051ef024 RISC-V: If -m[no-]strict-align is not passed, assume its value from -mtune
-8b26c5492bf1d4c7acab18eff1e78a239af779a1 Add vect_perm3_* target selectors
-2041a23a2ed58c7115bc8a942ee40efda0b72324 [riscv] Wrap ASM_OUTPUT_LABELREF in do {} while (0)
-16d24520af1ad5ff832d243f177d88f08a1ba012 Replace REDUC_*_EXPRs with internal functions.
-4ded4b230da2408bc6752ca4e4551204bebe806b altivec.h (vec_extract_fp32_from_shorth, [...]): Add #defines.
-36f52e8f0812546e6cb533b384b29f56570624ff [SFN] boilerplate changes in preparation to introduce nonbind markers
-c5060cadf030f6517a1552bf0fc263cb03eb96c4 [Patch combine] Don't create vector mode ZERO_EXTEND from subregs
-58cc7d798875aee798ba6a5b07c9324717160a2c re PR c++/83300 (Segmentation fault with template and __attribute__((vector_size (sizeof(int) * N)));)
-84e777839cc458da2c24bda8e7be1665be1f709c vsx.md (define_expand xl_len_r, [...]): Add match_dup argument.
-b254c1a2322532451b419c8ce850ab7347f51469 Fix vect-reduc-or_[12].c changes in r257022
-85bb2f9a302acc28dbae6c368d63680aacb15eb1 re PR target/83008 ([performance] Is it better to avoid extra instructions in data passing between loops?)
-b10bc0d6f9d5e281465c6f8d4197f3158e46e093 Add missing intrinsics for _mm_mask[z]_sqrt_round_[sd,ss]
-15f0c25f4e9194fd03b2788769b7e1163e5caabd [testsuite] Require vect_int_mult in pr84512.c
-df1f46241d8f1869b492023c9f4e1389a12675c4 [testsuite] Add nvptx xfail to pr84512.c
-153dba6cbb3b37ad07d23d212890b2bd055ac05f re PR c++/85077 (V[248][SD]F abs not optimized to)
-2368eaf95dff456f6527f6d82579af0246141553 re PR fortran/81773 ([Coarray] Get with vector index on lhs leads to incorrect caf_get_by_ref() call.)
-e91eba31fdc49d928090a9b0424247fd6029f044 [nvptx] Fix calls to vector and worker routines
-080dc24383a602a5a4095eb05b04100f15ba1ad4 [BRIGFE] phsa-specific optimizations
-37d57ac9a636f2235f9060e84fb8dd7968abd1dc [PATCH] RISC-V: Use new linker emulations for glibc ABI.
-bb4e47476537f6431fbbf29cc804252b1504bbc2 re PR tree-optimization/85793 ([AARCH64] ICE in verify_gimple during GIMPLE pass vect.)
-67e9518e20b8b836bbaa9dc783bd6a4db56c2bcb re PR fortran/85841 ([F2018] reject deleted features)
-927a00917dfdf5585159803211c71910b32da10f re PR fortran/85841 ([F2018] reject deleted features)
-aeaa0347e94b1dfa040809b3b098fcc0474d45f7 [Ada] Vectors: spurious error in -gnatwE mode
-9d4ac06e0235697c7fa3144b6790b779e6385ea5 Add an "else" argument to IFN_COND_* functions
-2c53b149b7476fabd329429b2a6dce090f580ff4 tree-vectorizer.h (STMT_VINFO_GROUP_*, GROUP_*): Remove.
-0d2b3bca81acf226e6c10defbc6072de4cf7e75c Fold VEC_COND_EXPRs to IFN_COND_* where possible
-b55f342bdd8bec16b727a5889c589dd85c5ca3c3 re PR target/85832 ([AVX512] possible shorter code when comparing with vector of zeros)
-70d22cdd77fdd3a11514735a7992b5f07bd50159 re PR target/85918 (Conversions to/from [unsigned] long long are not vectorized for AVX512DQ target)
-1bda738bab8193f0fb4551672d3be928d2015cd2 re PR target/85918 (Conversions to/from [unsigned] long long are not vectorized for AVX512DQ target)
-e379122d1f078d230514ff862c4f9053c2898af4 tree-cfg.c (verify_gimple_assign_unary): Add checking for VEC_UNPACK_*_EXPR.
-3c5d07ab057a1cbe23ca655d172bfb53581be960 [Ada] Spurious tampering check failure
-1fc9aa543f41a1485187c96806950795a7966974 re PR target/85832 ([AVX512] possible shorter code when comparing with vector of zeros)
-8422c296a8cbe0317fd06aace694ed0c01f67d5b [testsuite] Remove xfail from vect-abs-compile.c
-d54a098e48987e7368ff190b703efd72aba9e6d9 [1/n] PR85694: Allow pattern definition statements to be reused
-e3947d809d75c6bc47e600ce490c238006c2de2b [2/n] PR85694: Attach a DEF_SEQ only to the original statement
-ed7b8123fab1de4d6da98774262c123f6d1226f9 [3/n] PR85694: Fix dummy assignment handling in vectorizable_call
-44ae7a002c23ff0ab884350b5f05876ece985387 [4/n] PR85694: Remove redundant calls to types_compatible_p
-1f78617090283f22825807fcc0533e27e983dcde [5/n] PR85694: Remove dead WIDEN_SUM handling
-259273074e86ec82c73a4420c102912de6baeabd [6/n] PR85694: Add a vect_get_internal_def helper
-49d8df1b95ac68fee5420a4ad7a0cab006302e0e [7/n] PR85694: Add a vect_pattern_detected helper
-1cbfeccc8d5ddade3a1727e18fe31c1e83e81701 [8/n] PR85694: Make patterns check for target support
-f2227a6696f136a181a208d291eb44769a7721e0 tree-vect-data-refs.c (vect_find_stmt_data_reference): Modify DR for SIMD lane accesses here and mark DR with (void *)-1 aux.
-894dd753ca8a4120078324cc6cf0ba01afff9cab [9a/n] PR85694: Reorder vect_is_simple_use arguments
-0f8c840c28c11b13e630b55ad3dc6e0670b4f817 [9b/n] PR85694: Make vect_is_simple_use look through pattern statements
-7b98e98a98c95029434200cdfc5ad87e204d79b4 [10/n] PR85694: Split out check for vectorizable associative reductions
-41949de9de0c8ebabb7adb2701e775ecd671aa72 [11/n] PR85694: Apply pattern matching to pattern definition statements
-003479340f5ae6b7407b5c92e3e1915101552377 [12/n] PR85694: Rework detection of widened operations
-3330053ecaafe8bca82cc3845be9b2d01a614eb1 [13/n] PR85694: Try to avoid vectorising casts of invariants
-30f502eddecac8ecfbec4b86f3a80f1859076b6d tree-vect-stmts.c (vect_is_simple_use): Consolidate dumping, always set *dt.
-370c2ebe8fa20e0812cd2d533d4ed38ee2d37c85 [14/n] PR85694: Rework overwidening detection
-4ef79c960aa0967cf0298dc496a30a40d86ebd3c [15/n] PR85694: Try to split existing casts in widened patterns
-0267732baeb06ec100c1d610197bb88aae1c5123 [16/n] PR85694: Add detection of averaging operations
-c98446bc37da231419f6524d788dc6a4712458c8 [testsuite] Remove 'note:' from scan-tree-dump directives
-4cdfee3f206d784f8a502af4f34180a0762df4fe [libgomp, nvptx] Handle per-function max-threads-per-block in default dims
-0847049dc7a630e4bfa079767ed42c742ff6276b [01/46] Move special cases out of get_initial_def_for_reduction
-ac1359be3a39f4d12342c98c2a2e77bd59a839f4 [02/46] Remove dead vectorizable_reduction code
-6e2dd807c2aaaba8906a36766b9f98dfbeddc27d [03/46] Remove unnecessary update of NUM_SLP_USES
-83a400d0a57c998508c31389286d6fb427985139 [04/46] Factor out the test for a valid reduction input
-79cc8302f73a56dd1e84e87a26d35ed7e5bfea53 [05/46] Fix make_ssa_name call in vectorizable_reduction
-4fbeb36361aab0c197c01f6268e442446f2c1fa8 [06/46] Add vec_info::add_stmt
-6585ff8f3a55bbfed6a4f2c2addac7a27ed087d3 [07/46] Add vec_info::lookup_stmt
-c98d05955ba54fcdbae37f2a9e81b8cca6f1ca59 [08/46] Add vec_info::lookup_def
-0d0a4e205bb6da84e9218c483acf7b13453f0698 [09/46] Add vec_info::lookup_single_use
-dbe1b846648fad29d105e2e503120a4279a32593 [10/46] Temporarily make stmt_vec_info a class
-fef96d8e2a370e826acdf914d51c88aa2657340a [11/46] Pass back a stmt_vec_info from vect_is_simple_use
-e1bd72966309ac459a55e2bc64ad355272d402f5 [12/46] Make vect_finish_stmt_generation return a stmt_vec_info
-10681ce8cb6227ae5c11cc74ddf48f2fc5e6f87e [13/46] Make STMT_VINFO_RELATED_STMT a stmt_vec_info
-1eede195fc02f5198b48d75b3fb7705c4c1493dd [14/46] Make STMT_VINFO_VEC_STMT a stmt_vec_info
-16edaeb8a6b1cd72b2eedfe8cac684ac3f4785c2 [15/46] Make SLP_TREE_VEC_STMTS a vec<stmt_vec_info>
-542ad08cea053ac4a02729e2f37c67bb50019bc0 [16/46] Make STMT_VINFO_REDUC_DEF a stmt_vec_info
-32c91dfcfddc4f3c594aa24e803ee605a259f2a9 [17/46] Make LOOP_VINFO_REDUCTIONS an auto_vec<stmt_vec_info>
-b978758186fa187d52d2c4a02cdc8474d361a0dd [18/46] Make SLP_TREE_SCALAR_STMTS a vec<stmt_vec_info>
-78e02b3bbb00fc898c550b88161838eb5dd95806 [19/46] Make vect_dr_stmt return a stmt_vec_info
-bffb8014d0566af64c3cd5c7afac21c125a14df2 [20/46] Make *FIRST_ELEMENT and *NEXT_ELEMENT stmt_vec_infos
-f698fccf099a69415619858062431c9383caf070 [21/46] Make grouped_stores and reduction_chains use stmt_vec_infos
-c26228d41bcbb1a8027570cbef7a2c00ed75f2d6 [22/46] Make DR_GROUP_SAME_DR_STMT a stmt_vec_info
-7bcbf2d83269394899f27695e19715dca8f098bf [23/46] Make LOOP_VINFO_MAY_MISALIGN_STMTS use stmt_vec_info
-211ee39b9d1d7d670dd4885bd1f4f038680a1e90 [24/46] Make stmt_info_for_cost use a stmt_vec_info
-95c68311b61f6bbb013d0eb2e4403f01c76bf622 [25/46] Make get_earlier/later_stmt take and return stmt_vec_infos
-beb456c375ea71d57e35400e9b7107e09e996965 [26/46] Make more use of dyn_cast in tree-vect*
-91987857e694109fa312c9d2d83785aee5fb9c28 [27/46] Remove duplicated stmt_vec_info lookups
-86a91c0a7d39103bc26f6a9f6cd0b329c9027161 [28/46] Use stmt_vec_info instead of gimple stmts internally (part 1)
-a1824cfdcd12f2c928b2aa00278082c56e818497 [29/46] Use stmt_vec_info instead of gimple stmts internally (part 2)
-eca52fdd6c570658e417ab38d25e0874d0c9c044 [30/46] Use stmt_vec_infos rather than gimple stmts for worklists
-825702749aee7017548db2075cf225a6ed2e3ca8 [31/46] Use stmt_vec_info in function interfaces (part 1)
-32e8e429c685629fc4363138f564f41de47aa7a2 [32/46] Use stmt_vec_info in function interfaces (part 2)
-d7609678843a0711cf77b5530149658c3997a906 [33/46] Use stmt_vec_infos instead of vec_info/gimple stmt pairs
-e4057a3920490abb69bb22237ebe380ac4fd64f5 [34/46] Alter interface to vect_get_vec_def_for_stmt_copy
-cef6cac8bcacc3314760686dfae7b23efdf7db07 [35/46] Alter interfaces within vect_pattern_recog
-634e7150449157267db1a1152370b11446acb6d0 [36/46] Add a pattern_stmt_p field to stmt_vec_info
-f44fb7aa84e0c1f9c0721a69f7b0f157d6058686 [37/46] dr_aux tweaks
-89fa689a9e898ccb81b966477b3ac4e254461b05 [38/46] Use dr_vec_info to represent a data reference
-1e5e6ff5e63127a7a6ae4ee64d08a22a41a021c4 [39/46] Change STMT_VINFO_UNALIGNED_DR to a dr_vec_info
-f5ae28565e7b0788c6b7a4945c2b67c54f46c45a [40/46] Add vec_info::lookup_dr
-b5b56c2a039cd308a9d00fc35baf65c1fb59070b [41/46] Add vec_info::remove_stmt
-9d97912b85ac4a86767f4f1b6c47efa1ce0ba6af [42/46] Add vec_info::replace_stmt
-458135c0354f19eb2bd032d42c27076def8c31de [43/46] Make free_stmt_vec_info take a stmt_vec_info
-6ef709e50228eb23c25d3620ac6eadb6d765d40d [44/46] Remove global vinfo_for_stmt-related routines
-dddecc5c01a0cdeb06704ed98eac881ead550664 [45/46] Remove vect_stmt_in_region_p
-ddf98a96d0112377361258068a167ba7e51ed345 [46/46] Turn stmt_vec_info back into a typedef
-99615cf595266cdbe27fb3caf201fa38bd1f8d8b [01/11] Schedule SLP earlier
-8fe1bd30e6e1319cde10ed417abbfe87d3511edc [02/11] Remove vect_schedule_slp return value
-b0b45e582f31b496ea37a76a20b1f79b25165635 [03/11] Remove vect_transform_stmt grouped_store argument
-211cd1e2358d52d3863f727b650c65650dd5ce89 [04/11] Add a vect_orig_stmt helper function
-6e6b18e5fbe6be62334c9007a58224fb3700d43a [05/11] Add a vect_stmt_to_vectorize helper function
-2d4bca81bd7dceb0701e5cd87132d8e3892c22ba [06/11] Handle VMAT_INVARIANT separately
-beeb6ce8631cd0e23160dbbafd5f43d16a749e02 [07/11] Use single basic block array in loop_vec_info
-ca9a1314ec5f2b58921e24abdcebae1482c0e2c6 xcoff.c (struct xcoff_line, [...]): Remove.
-1ae45251d9fb6b68046cbe1c6f942e1aacdeaf0a [Ada] Partially revert "Makefile patches from initial RISC-V cross/native build."
-68d235936bff881b22b6f9a8ab4446c225064454 backport: ffi.c (ffi_call_go, [...]): New functions.
-6f795a9239f6029072ac83357e8966c56cd572e0 Formatted printing for dump_* in the middle-end
-3a4da26602da1bd30c4ff2793fed480f180248c1 [1/2] Fix bogus double reduction (PR 86725)
-18bc19a7aa4cd08d45d64f6741b8b1e0f48f262b [2/2] Fix bogus inner induction (PR 86725)
-888157af3ef730e1e66c5e84ade11036a09d2205 re PR bootstrap/87225 (tree-vect-stmts.c:3748 error: converting to 'bool' from 'std::nullptr_t' requires direct-initialization [-fpermissive])
-057cf66ca3d290e0f68f66eba0e43379cb77f870 No a*x+b*x factorization for signed vectors
-6cdd5aecfb4e062354db8f7253240a371ba418af sse.md (reduc_plus_scal_v8df, [...]): Merge into pattern reducing to half width and recursing and pattern terminating...
-4124119974fd87380de607a6bc9bfdcffe1702d8 [PR87563][AARCH64-SVE]: Don't keep ifcvt loop when COND_<OP> ifn could not be vectorized.
-7702ab653a903d5131bf72244ae22424ffd2e6c7 revert: [multiple changes]
-1cab645d3e321132dca5e43d9d5057c60852a17c re PR tree-optimization/87105 (Autovectorization [X86, SSE2, AVX2, DoublePrecision])
-be43a8877e2f2f4590ba667b27a24a0cfdf8141d re PR tree-optimization/87105 (Autovectorization [X86, SSE2, AVX2, DoublePrecision])
-a1f072e2441c58f6a486f90bb9a32bd5f6c51cb4 re PR tree-optimization/87105 (Autovectorization [X86, SSE2, AVX2, DoublePrecision])
-aac1c11ce4edd9c2e6af7e9ee8abcaba98d8741f [ARC] Add BI/BIH instruction support.
-ca31798e7bf8f87d78ff1ee66c120b135a1b2ebc [PATCH][GCC] Make DR_TARGET_ALIGNMENT compile time variable
-9989a43983116c05aca5c3b5fc30191524b73b94 [Ada] Update signal constants for GNU/Linux
-0c155f24a945a55c37a963f64e89870f60543e64 [libbacktrace] Avoid realloc with size == 0 in backtrace_vector_release
-6d760a0197ece131619ac88f0fe34ce452fd774c [libbacktrace] Don't point to released memory in backtrace_vector_release
-518a3a2106e4e8172a1c7628b79b63635857fec3 [libbacktrace] Factor out backtrace_vector_free
-5f531feff7ed6651354ed5b1cbd2a83cf204d170 [Ada] Spurious errors on aspect specifications in generic units
-62ebfa527237ba42c9d93032dc008e82d482d271 [Ada] Uintp: add a new UI_From_Integral generic constructor
-5d17a4763a71cbf10d3d4bb93bed11f832a24683 [nvptx] Add PTX_WARP_SIZE
-693ad66b86dcadc9764a2ef4365902b153560dde [nvptx] Move macro defs to top of nvptx.c
-0d3d674bcb173e8d694715c1e4fa24937cccc0f3 [PR86153] simplify more overflow tests in VRP
-a0b3b5c4af07ba34991c4f253496725a760104c2 [nvptx] Make nvptx state propagation function names more generic
-53a52133a5fc74d63ce17b328774706bf1e79e02 [libbacktrace] Fix memory leak in build_address_map
-40b8d3b2536246b7449b6c7ce7a972537e5f11e1 [libbacktrace] Fix memory leak in loop in build_address_map
-eb33bf0a0a4914eb2a88614cf4041069843018d6 [libbacktrace] Reduce memory usage in build_address_map
-0d06e8c794f37ded34e902ead35e7c70c3b112d1 [nvptx] Add nvptx_mach_vector_length, nvptx_mach_max_workers
-5c571497e1b9b4ac407aa0db359292b0de6cd42e [nvptx] Add vector_length 128 testcases
-43493c97a6e8ee3b1e52e3983ac255722cdcfdd4 [nvptx] Fix libgomp.oacc-c-c++-common/vector-length-128-3.c
-764ecad43b6cac2d2eded706fccd29cc15481ad2 [nvptx] Eliminate PTX_VECTOR_LENGTH
-ccc0d492f109456db8df72938bf39fd03510d2b3 [nvptx] Allow larger PTX_MAX_VECTOR_LENGTH in nvptx_goacc_validate_dims_1
-0024c32045a72ef45a64ab5673a2ba587978d9d1 [nvptx] Add support for a per-worker broadcast buffer and barrier
-d495b5ccd252fdb01c70a73f145a008555b5a253 [nvptx] Don't emit barriers for empty loops -- fix
-f881693c53374c743d3b5d1561708a64dcfe7eb6 [nvptx] Handle large vector reductions
-6e723923df52bdde7c3aebd6bccaae3c7bff19ee [nvptx] Force vl32 if calling vector-partitionable routines
-46c66a46aa33077bda821e0428cc7859945c04c8 [1/2] PR88598: Optimise x * { 0 or 1, 0 or 1, ... }
-f4bf2aabe36633d75852313caafe7efab71d5ba7 [2/2] PR88598: Optimise reduc (bit_and)
-2c372e81a996e105571e71108f6427c38ec2a71a [nvptx, libgomp] Don't launch with num_workers == 0
-052aaaceed25c962791b0b973f66febabaf47574 [nvptx] Don't allow vector_length 64 with num_workers 16
-980af7cd8fb385f9bb818e29d08fe4af73cd2788 [nvptx] Verify dimension limits after applying defaults
-d6f528e70ad88ddcc9786e6050d92e003d19d0a3 [nvptx] Allow default vl to be overridden in nvptx_goacc_validate_dims_1
-af79605ec27c0db7dee9ee001cd7d768eb6fcf02 [nvptx] Apply vector-partitionable routines workaround to default vl
-2b9d9e393766d2fa6e2dd5f361d0db14872cf261 [nvptx] Enable large vectors
-52d22ece49ac0517d4288d65a5ee6dd8d9441d4c [nvptx] Update insufficient launch message for variable vector_length
-8e77f71eda4610040727c69a782b12976dd9228b [nvptx] Enable large vectors -- test-cases
-2cb7a501ab0be001dca4bac0d9af9298c0bfabbc [nvptx] Enable large vectors -- reduction testcases
-56314b772f0867d81a4f7c7850d460e395563dff [nvptx] Force vl32 if calling vector-partitionable routines -- test-cases
-a10577582585850c88b77dbc492eb046c05e79ce [nvptx] Add vector_length 64 test-cases
-2c2ff1684dd33a4ec2ea7b91c0ada9cf371bf75f [nvptx] Enable setting vector length using -fopenacc-dim
-efb56ae82bd871b64861e991466ce616688a88e9 [nvptx] Enable setting vector length using -fopenacc-dim -- testcases
-9d576782a29581c04c60d7b9415bb7d3014b0c8c [libbacktrace] Add find_unit
-deeec83de4379e253af4f41eaaf8f45d4db17302 re PR tree-optimization/89594 (ICE: Segmentation fault (in gsi_for_stmt(gimple*)))
-64a40f1320c0edc160796266876958ffae8fdd96 [PR72741] Encode OpenACC 'routine' directive's level of parallelism inside Fortran module files
-9e3501f765540f08aad0bcc0821908181366f177 gnu.ver (GLIBCXX_3.4.26): Change _Lock_policyE2 exports to _Lock_policyE[012].
-d7b6aee8cd346328b6f22fc415ffc28b9cf8a285 [libcpp] Reimplement mkdeps data structures
-3a0afad0d212b3ff213b393728e018caf2daa526 re PR target/88837 ([SVE] Poor vector construction code in VL-specific mode)
-fa9863e7d34ecd011ae75083be2ae124e5831b64 re PR target/88834 ([SVE] Poor addressing mode choices for LD2 and ST2)
-9b884225bfc609606f9b169b021c4da93feba48e re PR target/88838 ([SVE] Use 32-bit WHILELO in LP64 mode)
-bce29d65ebe1316d15ec7582a1d257ef1be163f7 [Vectorizer] Support masking fold left reductions
-75da268e1a563a1a52389cd2ecee12d07c45a655 re PR target/88833 ([SVE] Redundant moves for WHILELO-based loops)
-584b52902b4b1bbcabc0e5bdd4196bd223d2f5a8 [Ada] Ada.Containers.Formal_Vectors: make vectors always bounded
-fe04f57a81366e5aaf0fec054d87919f6c243947 [Ada] System.Linux: fix typos in comments
-7ef004023510d0c88e1a8bb718ee2848c1358ea4 [riscv] Fix ambiguous .md attribute uses
-6c1dae73cd2ceb6a326f786f6d4e8674863de45e PR c++/61339 - add mismatch between struct and class [-Wmismatched-tags] to non-bugs
-99b1c316ec974a39bdd949f8559bb28861b69592 PR c++/61339 - add mismatch between struct and class [-Wmismatched-tags] to non-bugs
-d64c6837a72def74a510429cc33e279c355829b7 [PATCH] Fix typo in test case.
-21caa1a2649d586f4f8830aba43b0c132584f2dd re PR middle-end/91166 ([SVE] Unfolded ZIPs of constants)
-dfa6d55af715a2b902d6ed30f2c0276b1709dd5b [Ada] Extend range type in search primitives of formal vectors
-0728477991b0a10cdde60ca1b4ae39fce414041a [Ada] Allow for of iteration on formal vectors
-26d815a3e587ac04dbd63eec3fb5aecb04db7242 re PR tree-optimization/91723 (builtin fma is not optimized or vectorized as *+)
-d469a71e5a0eb512b522248841c56496abca8cd6 tree-vect-loop.c (get_initial_def_for_reduction): Simplify, avoid adjusting by + 0 or * 1.
-8209db250f305cc79fd751c3ed056fb9ff551a83 [C] Improve diagnostics for vector types
-56898e437a538c7edc0724a3650f5cb81c9d5721 [C] Avoid exposing internal details in aka types
-c1d781707eb611d65aa4e1275f246debba557a3d [C++ PATCH] clone_function_decl breakup
-a421fe9e610b5dbfce1913cd724c8ba193addd47 [vect] Refactor versioning threshold
-31b35fd503e1c6713839db24044812d237aba5f1 [vect] Outline code into new function: determine_peel_for_niter
-f261d4808cc28a2dfd47fe06c97364c0869bb78f [vect] Be consistent in versioning threshold use
-d2db7f790194ac690beae00f2f7956e3fe865cac [vect] Only change base alignment if more restrictive
-ea3628bdeb9a5411aaa1aa567fa6bc005057482f symbols-summary.h (fast_function_summary<T *, [...]): Free m_vector.
-fa03d5763a91f5061152842c92fbb4e446a3b75f re PR middle-end/91272 ([SVE] Use fully-masked loops for CLASTB reductions)
-97c146036750e7cb3966d292572ec158a78f356e [vect]PR 88915: Vectorize epilogues when versioning loops
-1297712fb4af6c6bfd827e0f0a9695b14669f87d [vect]Make vect-epilogues-nomask=1 default
-d9a6144c87bd4c15c855785ced57907d66754861 [testsuite] Fix wrong order of dg-additional-options
-a6ba623777513e31721030092e4d786f461a0f06 re PR tree-optimization/92345 (ICE in vec<_stmt_vec_info*, va_heap, vl_embed>::space (vect_get_and_check_slp_defs))
-818b3293f4545d899148810f4f7d676b81e989dd [SLP] SLP vectorization: vectorize vector constructors
-494d6c28c53d0852bb6468b1f1ca189159775fcc [vect] Clean up orig_loop_vinfo from vect_analyze_loop
-a1b680597178df866e6de80444695fab82b90492 [D] Remove unchecked to_constant in VECTOR_TYPE handling
-2e7a4f579b1157754ea20a03431b4fa80cd4567a [vect] PR92317: fix skip_epilogue creation for epilogues
-f486280c53be53136f0bb9b578f43dc6c9c5acea [C] Opt out of GNU vector extensions for built-in SVE types
-b602712b3ea2a0729a2eda61bd9ee795aba6138f [vect] Disable vectorization of epilogues for loops with SIMDUID set
-4e9d58d16767b1bc686f0c4b3bd2da25dc71e8f3 [vect] PR 92351: When peeling for alignment make alignment of epilogues unknown
-87b47251924c7539a9a8e191587d118a14496473 [vect]Account for epilogue's peeling for gaps when checking if we have enough niters for epilogue
-9773f69c1161677e68f693562da82c92fd3821da [testsuite] Fix PR92464 by adjust test case loop bound
-3771033244b3ee1b53a8a00d734580b16384fdd3 Tweak gcc.dg/vect/bb-slp-4[01].c (PR92366)
-f2f3dbc67b85af0f1b6c6feb529a67baf011939c Disable epilogue loop vectorisation for vect-widen-mult-u8-*.c
-1f9fae28095488a9accd1e7688116ed4d145b03f [PATCH] Fix PR91790 by considering different first_stmt_info for realign
-65ef05d0b7fb429c5760189e638c441dc3da33f4 [C] Add a target hook that allows targets to verify type usage
-6f1e966874de23d7e47cbaebfb5a9de6759cb089 [C++] Opt out of GNU vector extensions for built-in SVE types
-8575d5925226a8f92ee644d6d59a2b1b93840d94 [Patch, GCC] Fix a condition post r278611
-8e03b21e84e4b6a3c806bb48bb5eceac1f7ed273 re PR tree-optimization/89007 ([SVE] Implement generic vector average expansion)
-e3126e5f649c8eebe07fc517d86f10d6867b7eec [GCC, Vect] Fix costing for vector shifts
-d878b2c9819e0ae9e942c87c3eb547b0bfb30dc5 [Ada] Use correct subtype for call to Last in formal vectors
-666b46c6106dbd3ad6a27be4bf1844ccbaa8e67d [Committed, testsuite] Fix PR92870
-96bea935c08ab0773b02cdeed7a2c066744fe861 [C++] Fix ICE for binding lax vector conversions to references (PR 93014)
-b8c9cc5100a8ba3aa56a6ffdd58d370cbb0134a4 [C++] Make same_type_p return false for gnu_vector_type_p differences (PR 92789)
-a0ab54de0ec3e0d48b2a681f7f78fe14bc4099eb re PR inline-asm/93202 ([RISCV] ICE when using inline asm 'h' operand modifier)
-67723321fb917e94acf5844c2524ca3d9655ff7b [vect] Keep track of DR_OFFSET advance in dr_vec_info rather than data_reference
-9c158322b6fdb47666f49c001dc54ea9f5c853e9 [vect] Add missing comment
-6cedf5d8e23c862db147e71d5767ca57e6b4f433 predcom: Fix invalid store-store commoning [PR93434]
-1ee3b380dfb479b335f3b50039ce26abcbffe59a forwprop: Tweak choice of VEC_PERM_EXPR filler [PR92822]
-5910b14503dd82772dfeca5336a0176f9b1d260a testsuite: Fix up pr91838.C test [PR91838]
-5a8ad97b6e4823d4ded00a3ce8d80e4bf93368d4 c++: Mark __builtin_convertvector operand as read [PR93557]
-c7c09af8ef0fe6671c7733d4d67bb73ecf10fc1b c++: Handle CONSTRUCTORs without indexes in find_array_ctor_elt [PR93549]
-be7c145ad52e76a1a0fd201dd96bc92e8d3a275d tree-ssa: Fix ICE in build_vector_type [PR93780]
-f91aa3e6cb808f8dfc6b45fa135f7583a7549161 vect: Fix offset calculation for -ve strides [PR93767]
-b6268016bf46dd63227dcbb73d13c30a3b4b9d2a optabs: Don't use scalar conversions for vectors [PR93843]
-15fc2e04a592f8bfcc3eafead71d0313566d8372 PPC64, fix documentation for __builtin_crypto_vpmsum* builtin functions.
-0ab503d34f2a8c22262ceefea6c882ae2ff75230 explow: Fix ICE caused by plus_constant [PR94002]
-22a75da901ba18110638abc497f56fecd11895d2 [PATCH][testuite] Fix pr80481.C after epilogue vectorization
-191bcd0f30dd37dec773efb0125afdcae9bd90ef Fix mangling ICE [PR94027]
-d5114529228f97c2a433fa72ddea3fadeb6465b3 [testsuite] Fix PR94023 to guard case under vect_hw_misalign
-cb2c60206f4f2218f84ccde21663b00de068d8c7 [testsuite] Fix PR94019 to check vector char when vect_hw_misalign
-4069adf4bbc90d16b603e0308b48499c36b2b637 c++: Tweak reshape_init_array_1 [PR94124]
-43d513af3f2026420312cc709dd729c81862de0c [testsuite] Fix PR93935 to guard case under vect_hw_misalign
-1aa22b1916a493ac46453d96e0c78ca47bcaeda3 c-family: Tighten vector handling in type_for_mode [PR94072]
-f1154b4d3c54e83d493cc66d1a30c410b9b3108a sccvn: Fix buffer overflow in push_partial_def [PR94300]
-ec919cfcef8d7fcbaab24d0e0d472c65e5329ca6 Fix vextract* masked patterns [PR93069]
-1dcffc8ddc48f0b45d3d0d2f763ef5870560eb9a fold-const: Fix division folding with vector operands [PR94412]
-f14b41d27124601284347a10d496362c8b4b8e1c vect: ICE: in vectorizable_load, at tree-vect-stmts.c:9173 [PR94398]
-4441ecedc3d74114683761901075085651928c52 Fix PR94443 with gsi_insert_seq_before [PR94443]
-37244b217a7329792f4ec48027f63cf5010b0ea8 c++: Fix constexpr evaluation of self-modifying CONSTRUCTORs [PR94219]
-f52eb4f988992d393c69ee4ab76f236dced80e36 vect: Fix up lowering of TRUNC_MOD_EXPR by negative constant [PR94524]
-e7c4084d11b957d925ba586f86db2f346fb3bfe0 [testsuite] Fix PR94079 by respecting vect_hw_misalign [PR94079]
-85353e24ca90282e1d3620682841f524de20475c forwprop: Fix ICE when building a VEC_PERM_EXPR [PR94683]
-413232a55b960c9b207abf14eea4a8dd247c3e90 forwprop: Fix ICE when building an identity constructor [PR94700]
-901f5289d9465d4c388ae288f850ad4f29e99a2c vect: Fix comparisons between invariant booleans [PR94727]
-bca558de2a24b2a78c6a321d6cec384e07759d77 tree: Fix up get_narrower [PR94724]
-f51be2fb8653f81092f8158a0f0527275f86603b Shortcut identity VEC_PERM expansion [PR94710]
-5328710be314dee43da8027dbff547d48b85e35e forwprop: Fix ICE when building an identity constructor [PR94784]
-e62a820d686d1fa97a9eefdc65ca07d8f96ac9f4 vect: Fix COND_EXPRs involving variant booleans [PR94727]
-e33a1eae25b8a8744db2fea72e739d64799ca61f --with-{documentation,changes}-root-url tweaks
-3af3bec2e4d344bd54a134d8b2263f44d788c3d8 internal-fn: Avoid dropping the lhs of some calls [PR94941]
-308bc496884706af4b3077171cbac684c7a6f7c6 add vec_info * parameters where needed
-144aee70b80de50f96a97ee64edd2f1c237c4906 match.pd: Canonicalize (x + (x << cst)) into (x * cst2) [PR94800]
-b4ace720e004f736f1ee46b374c12f9826aad630 riscv: Fix up riscv_atomic_assign_expand_fenv [PR94950]
-380a681518c3b387476be1064097f24b0847726d tree-optimization/94965 - fix typo in vec_info * passing
-d17a896da1e898928d337596d029f0ece0039d55 tree: Add vector_element_bits(_tree) [PR94980 1/3]
-14605b6bd8c37fffd8065c5c3fe6b1b9d7b2a294 tree-vect-generic: Tweak build_replicated_const [PR94980 2/3]
-4c0283b9ad75b128b79c507d78d678123fe9f471 tree-vect-generic: Fix bitfield widths [PR94980 3/3]
-dfa4fcdba374ed44d4aa1a22b2738f3f5c5b37af Fix alignment for local variable [PR90811]
-e740f3d73144abbca1ad98a04825c6bd63314a0b Add missing vector truncmn2 expanders [PR92658]
-4b490c1ec51c276069c29f23406164803587bd06 [Ada] Bump copyright year
-ae9293fb8e1895006ce33069eaabdecfe65c46a2 [Ada] Silence spurious warning on instances of formal vectors
-8be374e02761c9d63d2753d71e4bd4874a1577b1 forwprop: Ignore scalar mode vectors in simplify_vector_constructor [PR95528]
-d0e0c1300f9f08608873df5571e14a61308dd0c0 RISC-V: Describe correct USEs for gpr_save pattern [PR95252]
-d30846a02eb9ea43b61311e74fbf05692ffefba2 vect: Fix an ICE in vect_loop_versioning [PR95570]
-beaf12b49ae030505194cdcac18b5c8533a43921 RISC-V: Fix ICE on riscv_gpr_save_operation_p [PR95683]
-668ef28fbb44c1e51d9c5a35b421903c98d87b03 c++: Clean up previous change [PR41437]
-9a875db43cd4210843c480c8df26a1d6624d057d forwprop: simplify_vector_constructor follow-up fix [PR95713]
-5c9669a0e6cbf477a03024522943197bdb2682d4 vect: Fix an ICE in exact_div [PR95961]
-7d599ad27b9bcf5165f87710f1abc64bbabd06ae c: Fix bogus vector initialisation error [PR96377]
-95f5a3258dd8a9584f2b10304f79441ef2d4c64c veclower: Don't ICE on .VEC_CONVERT calls with no lhs [PR96426]
-344f09a756ebd50510cc1eb3db111fd61c527702 [nvptx] Handle V2DI/V2SI mode in nvptx_gen_shuffle
-ea858d09571f3f6dcce92d8bfaf077f9d44c6ad6 vect: Skip epilogue loops for dbgcnt check [PR96451]
-c2fb0a1a2e7a0fb15cf3cf876f621902ccd273f0 libstdc++: Make self-move well-defined for containers [PR 85828]
-1b0be822208349b2795381deace2352e998c1ad0 analyzer: fix ICE on unhandled tree codes in gassign [PR96640]
-fc02b568e2cd3f6a28d4b7c1063bbf8842c89aad analyzer: fix ICE on folding vector 0 [PR96705]
-2f5951bd95e334d611f4be7bbe1a136c580f9c20 analyzer: fix ICE on vector comparisons [PR96713]
-9f2f79df19fbfaa1c4be313c2f2b5ce04646433e gimple-fold: Don't optimize wierdo floating point value reads [PR95450]
-0106300f6c3f7bae5eb1c46dbd45aa07c94e1b15 varasm: Optimize memory broadcast for constant vector under AVX512 [PR54201]
-753b4679bc46f6806cf45d9afc3783c6d3b63589 c++: Fix P0960 in member init list and array [PR92812]
-1690a839cff2e0276017a013419d81d675bbf69d analyzer: generalize sm-malloc to new/delete [PR94355]
-848e74bea1e8031925d3efe2d85b555a3cf8db38 [PATCH][PR96791] disable POImode ld/st for memcpy
-40e99ed5f4e59c6d0a8e81cd6544c9b4e7ec2fe7 Fix fma test case [PR97018]
-5427bd4d57c0376e51fc7b256e76aa46c43aa8cf test: Adjust case p9-vec-length-full-6.c [PR97075]
-d00b1b023ecfc3ddc3fe952c0063dab7529d5f7a powerpc, libcpp: Fix gcc build with clang on power8 [PR97163]
-97b798d80baf945ea28236eef3fa69f36626b579 [SLP][VECT] Add check to fix 96837
-f54147fcfd885598d57783f98b0786e9e200a5dc [Ada] Use new Max_Integer_Size attribute in system.ads files
-cd6cd6aed195b4ec7d652e8b41d60b60e174304e PR libfortran/97063 - Wrong result for vector (step size is negative) * matrix
-73764bae1d416524fc06e0f01f81c7274ec0937b [Ada] Raise Capacity_Error on formal vector insertion
-7026bb9504eb0f95e114f832cd6dd14302376861 Refactor implementation of *_bcst{_1,_2,_3} patterns.
-3d423c6f6a69d87ad52ba3af75f3debd8a8b8810 c++: Handle RANGE_EXPR index in init_subob_ctx [PR97328]
-31643fa3e994749bd2da7b35846f1958f8823b8d [PR97504] riscv needs wraplf for aux_long_long_float too
-69adcfce1236705584ed83b46ba42d4875948aa3 Fix gcc.dg/vect/bb-slp-5[89].c
-54ef7701a9dec8c923a12d1983f8a051ba88a7b9 value-range: Give up on POLY_INT_CST ranges [PR97457]
-5681668765e233735b4c5e6a305e73ae1f80a328 c++: Tolerate empty initial args during normalization [PR97412]
-63d0da8852553ec42d5256e9c96ee21d26e0c2cd gcc-changelog: Handle situations like '* tree-vect-slp.c (): '
-f5e18dd9c7dacc9671044fc669bd5c1b26b6bdba pass: Run cleanup passes before SLP [PR96789]
-beddd1762ad2bbe84dd776c54489153f83f21e56 [OpenACC] More precise diagnostics for 'gang', 'worker', 'vector' clauses with arguments on 'loop' only allowed in 'kernels' regions
-41f7f6178e2d35288273656dc55dae8fcf3edeb5 [Fortran] More precise location information for OpenACC 'gang', 'worker', 'vector' clauses with argument [PR92793]
-fab72592d86d11b89a01f0f3c2c9c329d43466c1 [OpenACC] Use proper location to 'inform' of enclosing parent compute construct
-3e190757fa332d327bee27495f37beb01155cfab phiopt: Optimize x ? 1024 : 0 to (int) x << 10 [PR97690]
-9fc9573f9a5e9432e53c7de93985cfbd267f0309 [2/3] [vect] Add widening add, subtract patterns
-ae48b74ca0c0ba33d396a6ebad7a1c0a6dadb1f7 c++: Fix array new with value-initialization [PR97523]
-24b553d0f73ffea2551a77c67859ad6fe44110a6 [testsuite] Enable column location checking for 'dg-optimized', 'dg-missed'
-8d87bb8f56db177718bf0f07df462b85a90c1ef3 [Ada] Add support for 128-bit fixed-point types on 64-bit platforms
-704ccefb576dcf30b27a4b9bdacb6e15902f5307 debug: Fix another vector DECL_MODE ICE [PR98100]
-f5b902a9af9d1cce6c540c7f71e02e22e45c23ef [VECT] pr97929 fix
-cd676dfa57e643a4f7d8445e6ebad0f21cf3fd84 bswap: Handle vector CONSTRUCTORs [PR96239]
-68dd664912916c3bce87e95b2ddf12184e0c1b43 [Ada] Remove unused subprograms in validsw
-9032d2b2414ed22e53a9980a51b835d3caf83c48 bswap: Fix up a thinko with empty CONSTRUCTORs [PR98378]
-1467a5c5ab0dfbae3175b4a326467f939864dadb bootstrap: std:stoul non-portable [PR 98412]
-0411210fddbd3ec27c8dc1183f40f662712a2232 genmodes: Update GET_MODE_MASK when changing NUNITS [PR98214]
-9fa5b473b5b8e289b6542adfd5cfaddfb3036048 vect: Fix bogus alignment assumption in alias checks [PR94994]
-58a12b0eadac62e691fcf7325ab2bc2c93d46b61 vect: Avoid generating out-of-range shifts [PR98302]
-01be45eccee42d0cc6c900f43e2363186517f7ed vect: Fix missing alias checks for 128-bit SVE [PR98371]
-a7553ad60bebc419d510564b8b9f9e5e03725ff5 store-merging: Handle vector CONSTRUCTORs using bswap [PR96239]
-4ddee425b8c427d3cc13c49b26f442313e239572 reassoc: Fix reassociation on 32-bit hosts with > 32767 bbs [PR98514]
-d02a8b63e5aef49ab6973c64a2225236895763a1 bswap: Fix up recent vector CONSTRUCTOR optimization [PR98568]
-78595e918ee168f595d16268073a3754c64d67fe gimple-isel: Fall back to using vcond_mask [PR98560]
-298e76e6562bb79ed42cb4bc88aca817e6e58417 gimple-isel: Check whether IFN_VCONDEQ is supported [PR98560]
-9febe9e4be7812519258ea3ed4f38bbc1a61624b widening_mul: Pattern recognize also signed multiplication with overflow check [PR95852]
-11cbea852b0ae2b0f17a9caeaf6344d689231c2f c++: Fix cp_build_function_call_vec [PR 98626]
-ea74a3f548eb321429c371e327e778e63d9128a0 vect: Fix VLA SLP invariant optimisation [PR98535]
-68ba1039c7daf0485b167fe199ed7e8031158091 [PR98777] LRA: Use preliminary created pseudo for in LRA elimination subpass
-bca467e56fe111fa6d876656c60d5704065e83fe c++: ICE with delayed noexcept and attribute used [PR97966]
-eb77a934eec8fe52e4c5612f5264127290bc517d testsuite: Fix up pr98807.c on i686-linux [PR98807]
-25f303e9a27a0d799f9979446d9f11ed62b8d648 testsuite: Fix up gomp/simd-{2,3}.c tests [PR98243]
-1592b74350a0311e4c95a0192ea9c943847e7bc0 tree-vect-patterns: Don't create over widening patterns for stmts used in reductions [PR98848]
-8d0737d8f4b10bffe0411507ad2dc21ba7679883 Fix ICE: Don't generate integer mask comparision for 128/256-bits vector when op_true/op_false are NULL or constm1_rtx/const0_rtx [PR98537]
-072f20c555907cce38a424da47b6c1baa8330169 PR target/98878 - Incorrect multilib list for riscv*-rtems
-1531f39268c8973cf9478585fba5c5bbdb6e9c4c openmp: Fix up vectorization simd call badness computation [PR99100]
-d8889c99aab4b599aa7ceb7079e69a9766171336 c++: Macros need to be GTY-reachable [PR 99023]
-6e646abbe02f2c79cc3ba1f3de705ee62ff9dcd1 fold-const: Fix up ((1 << x) & y) != 0 folding for vectors [PR99225]
-96c5a8589e0dd22819bae34cac3381ad381d3989 [comitted] Testsuite: Disable PR99149 test on big-endian
-f207eed69e2421695e240aaf47bf881c09cbdd8a c++: Macro location fixes [PR 98718]
-6bd409cfc83683a9be5c6b3b8f9a3ec8959f9356 c++: abbreviated function template return type rewriting [PR98990]
-b5040344b9ca609e19ee59ba56cd4af9697a1692 dwarf2out: Fix -gsplit-dwarf on riscv or other non-.uleb128 targets [PR99090]
-ba09d11a9d0ae2382bab715b102a7746d20dea6d c-family: Avoid ICE on va_arg [PR99324]
-c778a237c1c605c2c5606c212c1ace756739442b c++: Redesign pending entity handling [PR 99170]
-9553c8a1b9dd2ca2f0f30d8b23fc6844c7e4a223 c++: Post-pending redesign cleanup [PR 99170]
-a3ad6489d38982434faef3bc5f33e3c28c5f7c74 openmp: Avoid ICEs due to orphaned labels in OpenMP regions [PR99322]
-99d5299376d203fe5172574c2d6b0b088e532383 [Vect] Fix mask check on Scatter loads/stores
-3fbac260fc7860a97fd00a54ca955266d737925f [testsuite] Fix target selector for pr99102.c
-47cca0288d06bd851e5801d13bbee7d9374b685d libstdc++: Fix headers that can't be used as header units [PR 99413]
-5f27a9f90d4eadadf937f1a5d0bfccf39261f330 c++: Fix unhiding friend with imports [PR 99248]
-bbdf59fdbc2ce41ccfac807b15cf3fac7b465a56 match.pd: Don't optimize vector X + (X << C) -> X * (1 + (1 << C)) if there is no mult support [PR99544]
-995a740cb01a0671a2082cb1ae13d0c356d4b568 libstdc++: Remove symbols for new std::call_once implementation [PR 99341]
-fc24ea2374259d401a46ce3526688b7e79d4cc13 dwarf2out: Fix debug info for 2 byte floats [PR99388]
-bd71889b9017751e1a06970d20b28b9fe9479bdc c++: Note duplicates in symbol table [PR 99283]
-25e515d2199d555848dfba01fd5364df94096496 fold-const: Fix ICE in extract_muldiv_1 [PR99777]
-1b5f74e8be4dd7abe5624ff60adceff19ca71bda Handle CONST_POLY_INTs in CONST_VECTORs [PR97141, PR98726]
-23be03a0f243a084a0fe03d0b96a3d045e1a2b65 c++: dependent attribute on parameter [PR97900]
-a40015780f8cc49476741b6914bd5ee97bd10f1d bswap: Fix up bswap_view_convert after the recent change [PR99882]
-66de517b1c1dd22df7914f8e9a083cd5a73adbe2 c++: placeholder type constraint in structured binding [PR99899]
-d11bcbe166c03f722c0e0d41d6e87ac445758fba tree-optimization/99947 - avoid v.safe_push (v[0])
-5c5b31975e62b4c52d76dc5efd9dc717a361c710 vect: Don't split store groups if we have IFN_STORE_LANES [PR99873]
-2f3d9104610cb2058cf091707a20c1c6eff8d470 vect: Restore variable-length SLP permutes [PR97513]
-05708d6eef87a3dd0c68b1aed7f8d9c3824062b8 c++: constrained CTAD for nested class template [PR97679]
-3e350d8539a4e28ddc30d0f08a4040f10b699135 gimple-ssa-warn-alloca: Always initialize limit [PR99989]
-a87d3f964df31d4fbceb822c6d293e85c117d992 Check for matching CONST_VECTOR encodings [PR99929]
-a3317f7b3c02907a122f89879e5b6e90c386e64d c: Don't drop vector attributes that affect type identity [PR98852]
-1696fc1ea01d5c9dce96b5d3122921aab9308f59 c++: Tweak merging of vector attributes that affect type identity [PR98852]
-b44ab138b7d4aaa5a9ee7956121ffc94777f6a42 vectorizer: Remove dead scalar .COND_* calls from vectorized loops [PR99767]
-eb8c931e0dbf1d7d9bc1279cab68a963e8f3c299 testsuite: Move gimplefe-4[0|1] tests.
-83d26d0e1b3625ab6c2d83610a13976b52f63e0a veclower: Fix up vec_shl matching of VEC_PERM_EXPR [PR100239]
-47915ef8477569b2fbd8001996aa4e542284bb24 libstdc++: Use std::addressof to avoid ADL for operator& [PR 60497]
-8d0d46f4a284946eccc504c58d1d9343f0967916 [Ada] Update copyright notice
-ec80b416554d3f41b5fd23cc86287af9b9a7d2d2 [Ada] Implement tiered support for floating-point output operations
-67207bd6e6c9b0bfc63bd6fd0a4e1056610c00fd [Ada] Fix s-os_lib.adb so vectorizing compilation works
-952da35cc67000445ca18d3ee8213d7c71a4b3a4 [Ada] Remove hardcoded pragma Warnings from the formal vectors library
-010d4a5047166037b316ed22331f3d99742f1f1d c++: ICE casting class to vector [PR100517]
-19040050aa2c8ee890fc58dda48639fc91bf0af0 expand: Don't reuse DEBUG_EXPRs with vector type if they have different modes [PR100508]
-94de7e225c1fda079052c3f0725c926437d56c94 Optimize __builtin_shuffle when it's used to zero the upper bits of the dest. [PR target/94680]
-149061188c7c6ddf27663c8c00b7574fc8d0fd23 c++: Check attributes on friend declarations [PR99032]
-45063c0506a00f2673049d46f12a6061dca4692f Fix ICE [PR target/100549]
-29a2f51806c5b30e17a8d0e9ba7915a3c53c34ff openacc: Add support for gang local storage allocation in shared memory [PR90115]
-11b8286a83289f5b54e813f14ff56d730c3f3185 [OpenACC privatization] Largely extend diagnostics and corresponding testsuite coverage [PR90115]
-4a9f2306cb39a3cf265eeb6f8f3a8bbaf230c4c8 forwprop: Enhance vec perm fed by CTOR and CTOR/CST [PR99398]
-ef8176e0fac935c095cc39f4ecdfd43cdb8cb3f3 c++/88601 - [C/C++] __builtin_shufflevector support
-ac0bc21bd634a334ba8f323c39a11f01dfdc2aae c++: value-init vs zero-init in expand_aggr_init_1 [PR65816]
-e1521b170b44be5cd5d36a98b6b760457b68f566 fold-const: Fix up fold_read_from_vector [PR100887]
-4db34072d5336d13b66f7185ec6454aa7d36f3c7 predcom: Enabled by loop vect at O2 [PR100794]
-e64d62c7008e6a4b0227fd25e071db8f0b3f1820 [nvptx] Update comment in 'libgomp.oacc-c-c++-common/parallel-dims.c'
-4bdcdd8fa8d7659e5a19a930cf2f0332127f8a46 simplify-rtx: Fix up simplify_logical_relational_operation for vector IOR [PR101008]
-008153c8435ca3bf587e11654c31f05c0f99b43a expr: Fix up VEC_PACK_TRUNC_EXPR expansion [PR101046]
-3adb9ac6626c15ba21e4eaf27fec95688a3ca8c2 testsuite: Add testcase for recently fixed PR [PR101159]
-99585d88a090b4c5b7791f7ab62f70eb37b748fa jit: fix test-vector-* failures
-82625a42e652d52fc6bbe6070f8d0589d5e0c8ad mips: check MSA support for vector modes [PR100760,PR100761,PR100762]
-175c2f98ea85004f23acc4b40f0e4264420116fc [Ada] Declare time_t uniformly based on a system parameter
-f0500db3692276f60e0562c17c87a0cb03e34398 Detect buffer overflow by aggregate and vector stores [PR97027].
-a1d27560770818c514ad1ad6683f89e1e1bcd0ec vect: Recog mul_highpart pattern [PR100696]
-89b3c97eed75c1e7c492bc727e0016003c5809cc vect: Fix wrong check in vect_recog_mulhs_pattern [PR101596]
-0829ab79d37be6c59072af0c4f54043f7e9d23ea [OpenACC] Extract 'pass_oacc_loop_designation' out of 'pass_oacc_device_lower'
-240b01b0215f9e46ecf04267c8a3faeb19d4fe3c libstdc++: Add [[nodiscard]] to iterators and related utilities
-0d04fe49239d91787850036599164788f1c87785 libstdc++: Add [[nodiscard]] to sequence containers
-9fcb8ec60302f5f110f94a885b618993c28d18d3 [testsuite] Fix trapping access in test PR101750
-08aa0e3d4f781fd6a6e293bb06d280365a0bdc1d tree-optimization/101809 - support emulated gather for double[int]
-7cad8a8f9f7bfa8e98f6a0615541f589fd1d3fc1 configure: drop version checks for in-tree gas [PR91602]
-b320edc0c29c838b0090c3c9be14187d132f73f2 bswap: Recognize (int) __builtin_bswap64 (arg) idioms or __builtin_bswap?? (arg) & mask [PR86723]
-3673dcf6d6baeb67bb70ff03d4cb3f92beed0075 Analyze niter for until-wrap condition [PR101145]
-ead408529d7a69873a7c14dd12fa043cd5862253 libstdc++: Fix conditions for optimizing uninitialized algos [PR102064]
-eca730231d5493647bb1e508fb1f853ffee0e95a testsuite: Fix gcc.dg/vect/pr101145* tests [PR101145]
-bea07159d1d4c9a61c8f7097e9f88c2b206b1b2f vectorizer: Fix up vectorization using WIDEN_MINUS_EXPR [PR102124]
-e902136b310ee17d4b49eb42d9d5e487d5dcf4a1 c++, abi: Set DECL_FIELD_CXX_ZERO_WIDTH_BIT_FIELD on C++ zero width bitfields [PR102024]
-51ca05031959d3accffe873e87d4bc4fbd22e9e9 Make profitability calculation of RA conflict presentations independent of host compiler type sizes. [PR102147]
-68c081bb437d7383481bb75e1f79975f63dc7661 RISC-V: Pattern name fix mul*3_highpart -> smul*3_highpart.
-681707ec28d56494fa61a80c62500724d55f8586 libstdc++: Do not allocate a zero-size vector<bool> [PR 100153]
-acf3a21cbc26b39b73c0006300f35ff017ddd6cb libstdc++: Reduce header dependencies for C++20 std::erase [PR92546]
-882d806c1a8f9d2d2ade1133de88d63e5d4fe40c tree-optimization: [PR102622]: wrong code due to signed one bit integer and "a?-1:0"
-84088dc4bb6a546c896a068dc201463493babf43 libstdc++: Fix std::match_results::end() for failed matches [PR102667]
-bd440a8c1c50b20b6eac028bca1fc682159787ba Adjust testcase for O2 vectorization[Wuninitialized]
-c7abdf46fb7ac9a0c37f120feff3fcc3a752584f openmp: Fix up struct gomp_work_share handling [PR102838]
-f3dbd3f36d55178d0a9e4431043cbc950524969a vect: Don't update inits for simd_lane_access DRs [PR102789]
-4f1fe0dc25391a1d73c1034a85b3b6bf04c5e26e testsuite: Fix up gcc.dg/pr102897.c testcase [PR102897]
-e399cde6f9c89cafbbf6c3274c0af3c369d4f872 RISC-V: Handle zi* extension correctly for arch-canonicalize script
-61a7f947cc063f92ccdaa6319f1f3894bcc8557e [vect] Consider outside costs earlier for epilogue loops
-8fd2477ddc358660611f79d8e50f31ed0f3aa105 genmodes: Define NUM_MODE_* macros
-abe562bb01479ea2c8952ad98714f3225527aa7e [PR/target 102957] Allow Z*-ext extension with only 2 char.
-6849c71c065e599282c98f3678f22ac52d97a755 testsuite: Filter out TSVC test on Power [PR103051]
-e9a53a4f764c37b50aff68811c5d37fcd6f38adb libstdc++: [_GLIBCXX_DEBUG] Remove _Safe_container<>::_M_safe()
-2551cd4f9bc1afee444a56e03c1cee6899593da9 [tree-vectorizer.c] Merge pass_vectorize::execute with vectorize_loops and replace occurences of cfun with function param.
-cfe8dbd9c08a5bce497646467c9d30942ec3efe0 libgccjit: Add some reflection functions [PR96889]
-9e026da720091704ca0456d405f16a3bc5f3a799 Reduce scope of a few 'class loop *loop' variables
-94912212d3d1be0b1c490e9b5f45165ef5f30d8a match.pd: Fix up the recent bitmask_inv_cst_vector_p simplification [PR103417]
-7057b8f8c2fbb7a2112705c2962d92b8ccef7c30 vect: Fix ncopies calculation for emulated gather/scatter [PR103494]
-1e625a44f6f3001cea31e0f7c563943ecba92b68 vect: Tighten check for SLP memory groups [PR103517]
-c2c843849a3392654d1c2191bd9931c0fff1f8ce cse: Make sure duplicate elements are not entered into the equivalence set [PR103404]
-e7fac1e1a5858abc9737518ddbdac780fd2ad8b8 libstdc++: [_GLIBCXX_DEBUG] Enhance std::erase_if for vector/deque
-50e8b0c9bca6cdc57804f860ec5311b641753fbb [PR103302] skip multi-word pre-move clobber during lra
-d5c965374cd688b0a8ad0334c85c971c1e9c3f44 middle-end: REE should always check all vector usages, even if it finds a defining def. [PR103350]
-411ac94611f164fac7ec1cd5953549c0a56cf43a slp: check that the operation we're combing is a boolean operation [PR103741]
-e781cb93d7d908f1f4f1611d0034eccbd1478e91 vect: Fix multi-vector SLP gather loads [PR103744]
-a64478660ee95930773d356760e39e05fe0147fe [Ada] Read directory in Ada.Directories.Start_Search rather than Get_Next_Entry
-d3ff7420e941931d32ce2e332e7968fe67ba20af [vect] Re-analyze all modes for epilogues
-4bb79e27c02c5cd57d5781bef20e70982d898c40 Extend predicate of operands[1] from register_operand to vector_operand for andnot insn.
-bc0b26b9a5836dc99fe69029b6948b8a2a58a36f [Ada] Update copyright notice and bump Gnatvsn.Current_Year
-2c4dccb605d485293291878397b42927dc050481 testsuite: Fix up c-c++-common/builtin-shufflevector-3.c testcase [PR101530]
-016bd7523131b645bca5b5530c81ab5149922743 [vect] PR103971, PR103977: Fix epilogue mode selection for autodetect only
-de196e5dd8ea4d0ed01a8c265afdd3676e27545b libstdc++: Add attribute to features deprecated in C++17 [PR91260]
-6d51a9c6447bace21f860e70aed13c6cd90971bd vect: Check partial vector param for supports_partial_vectors [PR104015]
-7ca1582ca60dc84cc3fc46b9cda620e2a0bed1bb [vect] Add main vectorized loop unrolling
-fc6cd798c07a94d6b0bcc16b175e6e5d6e594c7e testsuite: Adjust possibly fragile slp-perm-9.c [PR104015]
-ffc7f200adbdf47f14b3594d9b21855c19cf797a match.pd, optabs: Avoid vectorization of {FLOOR,CEIL,ROUND}_{DIV,MOD}_EXPR [PR102860]
-68f03ac49cb4f585dbce78dc9e4c4a9ec950e83c dwarf2out: Fix -gsplit-dwarf on riscv [PR103874]
-45b999f642a531c083c982dda79fa6ad65730a7c analyzer: fix ICE on vector casts [PR104159]
-abea1c9a252ef7712ab800360e1e0e2697ee14f2 c++: Fix up handling of vector CONSTRUCTORs with vectors in it in constexpr.cc [PR104226]
-9bf217920457f2e2d46b601f24721780a20a031b c++: vector compound literal [PR104206]
-a1544878966020d1f7a640b35d1f7a5f0e055624 match.pd: Fix up 1 / X for unsigned X optimization [PR104280]
-d43fbc7d3f7621e1c8f153c1471d2a5cd20bfdc8 [libgomp, testsuite] Fix insufficient resources in test-cases
-e9bf6d6b0e1d67df6dcee042fbe37ab72c3a38d7 veclower: Fix up -fcompare-debug issue in expand_vector_comparison [PR104307]
-e0451f93d9faa13495132f4e246e9bef30b51417 [nvptx] Add some support for .local atomics
-57f971f99209cc950d7e706b7b52f4c9ef1d10b0 [nvptx] Update bar.sync for ptx isa 6.0
-8ff0669f6d1d6126b7c010da02fa6532abb5e1ca [nvptx] Update default ptx isa to 6.3
-06e32a5ebf20c11dd31bc2677bede569fef84316 RISC-V: Always pass -misa-spec to assembler [PR104219]
-9d2c0fad59745bf67aa6471e8c9e96c351f0de59 analyzer: fixes to memcpy [PR103872]
-84993d94e13ad2ab3aee151bb5a5e767cf75d51e c++: Fix up constant expression __builtin_convertvector folding [PR104472]
-ae117af43944101ca47b99b743c85a3c528b4b4f [gimplefe] Add vector_mask attribute to get access to vector bools
-9355a8c35883b5125851bb9b4169a1a1cd8e343f match.pd: Fix up (X & Y) CMP 0 -> X CMP2 ~Y simplifications [PR104499]
-6a0d6e7ca9b9e338e82572db79c26168684a7441 openmp: Make finalize_task_copyfn order reproduceable [PR104517]
-12a88e6e208fa45a449775bfb9353c777a6081aa libstdc++: Deprecate non-standard std::vector<bool>::insert(pos) [PR104559]
-aee1adf2cdc1cf4e116e5c05b6e7c92b0fbb264b analyzer: handle __attribute__((const)) [PR104434]
-f62115c9b770a66c5378f78a2d5866243d560573 match.pd: Further complex simplification fixes [PR104675]
-1a0e3bba4b735fa8e4463d52950d0ce9c30c16c7 warn-access: Fix up check_pointer_uses [PR104715]
-d7b4c8feee11ea04b83f9996654c96b130588570 testsuite: Fix up pr104637 testcase [PR104637]
-5706a5db88a0eeaf82071debe1364f4533896a65 libstdc++: Use non-debug vector in constexpr test [PR104748]
-07395f19dff610f03d1b1d30c8bd640f610c45dc Test '-fopt-info-omp-all' in 'libgomp.oacc-*/kernels-private-vars-*'
-e28eb86c18ed765dceb3c56471a848e9f0e120ff Test 'libgomp.oacc-*/kernels-private-vars-*' with '--param=openacc-kernels=decompose' [PR104784]
-1c7b110e1e44da0c93d0d011f5109c5d09bf4399 vect: fix out-of-bound access in supports_vec_convert_optab_p [PR 104851]
-7a5e036b61aa088e6b8564bc9383d37dfbb4801e [OpenACC privatization] Analyze 'lookup_decl'-translated DECL [PR90115, PR102330, PR104774]
-98afdc3e2bfccf0a1337013b54f2c5634ef40ee5 riscv: Allow -Wno-psabi to turn off ABI warnings [PR91229]
-ac73c944eac88f37db2767aa4acc7ff6f4983f21 libstdc++: Reduce header dependencies from PSTL headers [PR92546]
-065e25f6331c130bc3cd2ce78036f2328adb3d71 [libgomp, testsuite, nvptx] Fix dg-output test in vector-length-128-7.c
-6d4bbee4f59c7102f8ed9b6774f0b2d9f6ff4365 Support pandn for V1TI mode (i.e. *andnotv1ti3).
-d037d9ad323ec9eef3e50c6e2cbc1e31191daa5d vect: Fix mask handling for SLP gathers [PR103761]
-d9421784980276b42ecdce85b6dde28e965c88c6 c++: vector compound literal [PR105187]
-fdd81afcf18d1a926d81d63cc4525fc9442aa9a5 testsuite: enable fast-math-complex-* testcases.
-7e7a96f774ed892e5cef53fcb68297cd0d513820 c++: use after free during name lookup w/ modules [PR99479]
-78c718490bc2843d4dadcef8a0ae14aed1d15a32 middle-end: Prevent the use of the cond inversion detection code when both conditions are external. [PR105197]
-4132f6ba9583e128a00d55961ae8c8e7245b2223 RISC-V: Support -misa-spec for arch-canonicalize and multilib-generator. [PR104853]
-d2f8208e9add01fe10ee56307cc79631b9995f74 libstdc++: Fix missing and incorrect feature test macros [PR105269]
-b209a349268d245f7a318861112df47bea15b89d analyzer: fix ICE comparing VECTOR_CSTs [PR105252]
-c049f638da4f7b32b11e4d895184e0960bae5291 fortran: Fix conv of UNION constructors [PR105310]
-7964ab6c364c410c34efe7ca2eba797d36525349 fortran: Use pointer arithmetic to index arrays [PR102043]
-1ba397e9f93d3abc93a6ecbabc3d873489a6fb7f c++: __builtin_shufflevector with value-dep expr [PR105353]
-7d31c678d68d7b6820a958584619ca763b0eb9c5 ifcvt: Improve noce_try_store_flag_mask [PR105314]
 7259481f0ece6283a6e2943448e8d28ffffc40f9 tree-optimization/104322 - remove dead code in vectorizable_reduction
 6ccc4356e7c5b4ca69d2029898a6439bb735cbc5 Prefer global range info setters that take a range.
 c090743b2ae0095f792371c7cbeb3cf6e2978f5d Fix is_gimple_condexpr vs is_gimple_condexpr_for_cond
@@ -542,11 +19,9 @@ ba2068893c37deaa418d9b2126414f6824e66655 Make gimple_build main workers more fle
 602a3161f425ee3fe325413eeab9792e8e07a2ff Clear killing defs when resetting the path in path_oracle.
 dc32901a0221a43e121591b9819b4e33bcc2fd0a testsuite: opt: Fix const7.C for RISC-V.
 010af1040bcf4870c8f1aac88a7b1538f622858b testsuite: btf: Fix btf-datasec-1.c for RISC-V
-16f7fcadac19dabd04a5abbe6601df52d22e9685 RISC-V: Implement C[LT]Z_DEFINED_VALUE_AT_ZERO
 ca32b29ec3e92dcf8dda5c2501d0baf9dd1cb09d Use more ARRAY_SIZE.
 6f5b06032eb9e3085611b2e14ca040af465930c1 Finish gimple_build API enhancement
 8b49556e4ee617e0920a9335685c7961971c3d0a [Ada] Fast implementation of floating-point mathematical functions
-3b4daa0b3c3d8eb2ac3b40ad6898f314ed4d7919 pointer-query: Fix ICE with non-pointer param [PR105635]
 8ccdc7ce33f5e7ca509e5b9f835ed4719db21ffd libstdc++: Ensure pmr aliases work without <memory_resource>
 570fbf448d126f1e4b3ef55327c3ea3ab0d3a806 testsuite: Skip vectorize tests for PRU
 075fb873c264a030f56793cb162c9fdecbdd1773 RISC-V: Fix canonical extension order (K and J)
@@ -570,11 +45,10 @@ a743a72714fc4a9d7036d28d0cacdf2a3621f629 DSE: Use the constant store source if p
 5e005393d4ff0a428c5f55b9ba7f65d6078a7cf5 Disparages SSE_REGS alternatives sligntly with ?v instead of *v in *mov{si,di}_internal.
 269edf4e5e6ab489730038f7e3495550623179fe Update {skylake,icelake,alderlake}_cost to add a bit preference to vector store.
 702a11ade2e87515a7dda1d1c028217bfe28e609 RISC-V: Use a tab rather than space with FSFLAGS
-4c334e0e4ff05d3a7ca9ebb832428c446cd0ae8d c++: Fix up ICE on __builtin_shufflevector constexpr evaluation [PR105871]
+fddb7f65129a12dabb5ddc3c8082fe576f4af451 Disable generating load/store vector pairs for block copies.
 033e5ee3c4a2c841ff24e3bf3fc5324ea9cc373c testsuite: Add -mtune=generic to dg-options for two testcases.
 f8baf4004ef965ce7a9edf6d2f5eb99adb15803a Add a general mapping from internal fns to target insns
 72b185189f914a412ae39776cd284dfaeaf2213b RISC-V: Reset the length to the default of 4 for FP comparisons
-f907cf4c07cf51863dadbe90894e2ae3382bada5 vect: Move suggested_unroll_factor applying [PR105940]
 4bf0dcb0492c40be7e0603b13a8b5949609388dd RISC-V: add consecutive_bits_operand predicate
 0247ad3e0f4a574273b42344fbaa9346599948f9 RISC-V: Split slli+sh[123]add.uw opportunities to avoid zext.w
 acb1e6f43dc2bbedd1248ea61c7ab537a11fe59b Fold truncations of left shifts in match.pd
@@ -582,7 +56,6 @@ acb1e6f43dc2bbedd1248ea61c7ab537a11fe59b Fold truncations of left shifts in matc
 1089d083117f28f3518f5ec3c7a153236cb92334 Simplify (B * v + C) * D -> BD* v + CD when B,C,D are all INTEGER_CST.
 b18e5d7e5f9df69759f0fbc2bed91d5e51313e79 RISC-V/testsuite: Fix pr105666.c under rv32
 d6b423882a05d7b4f40ae1e9d942c9c4c13761b7 RISC-V: Supress warning for comparison of integer expressions of different signedness
-a284fadcce8ef443cc3cc047a8017745efb51758 c++: Use fold_non_dependent_expr rather than maybe_constant_value in __builtin_shufflevector handling [PR106001]
 970b03c0037549a571ecea9afa41de78eb859b3a RISC-V: Fix a bug that is the CMO builtins are missing parameter
 9f55aee9dca759da84afd4563ff72d3ca8ab8a1c Add operators / and * for profile_{count,probability}.
 86882d9feb6a534325d7162216696266898e36d0 vect: Respect slp decision when applying suggested uf [PR105940]
@@ -590,7 +63,6 @@ a284fadcce8ef443cc3cc047a8017745efb51758 c++: Use fold_non_dependent_expr rather
 038b077689bb5310386b04d40a2cea234f01e6aa data-ref: Improve non-loop disambiguation [PR106019]
 509cdb441614eab2a0fe90a970a927538b832bcd testsuite: Compile slsr-39.c without vectorisation
 91418c42089cd1cbe71edcd6b2f5b26559819372 d: Add `@register' attribute to compiler and library.
-f21f17f95c0237f4f987a5fa9f1fa9c7e0db3c40 Fortran: fix checking of arguments to UNPACK when MASK is a variable [PR105813]
 8c99e307b20c502e55c425897fb3884ba8f05882 Convert DOM to use Ranger rather than EVRP
 725793af78064fa605ea6d9376aaf99ecb71467b Add 'final' and 'override' to opt_pass vfunc impls
 b93ae1a01bbad59ee77b7c84f4743a730138ba87 d: Add SIMD intrinsics module and compiler built-ins.
@@ -605,7 +77,6 @@ d2a898666609452ef79a14feae1cadc3538e4b45 Put virtual operands into loop-closed S
 1a6e0d8252a71c61d4dc616044fb25b5ac2cfffb tree-optimization/106196 - properly update virtual SSA for vector stores
 1d2aa262482fc9b23201200ca82aa3b8659b072e Provide a relation verification mechanism.
 d89fa97ff318b1f892e2629c5a249313872a01b1 lto-plugin: use locking only for selected targets
-f7854e2faf7640230062dec3596e71773ca500ed middle-end: don't lower past veclower [PR106063]
 cf3a120084e94614a4917f71940325cd4b537f24 tree-optimization/106226 - move vectorizer virtual SSA update
 79f18ac6b7ab7744fcf8937ea4bc0c40f3efc629 tree-optimization/106228 - fix vect_setup_realignment virtual SSA handling
 415d2c38edadf97950eb14b8d7e6b1491c98cdd5 tree-optimization/106228 - fixup last change
@@ -632,7 +103,6 @@ b64e937ccde286278743e8fdffea494faa46c214 openmp-simd-clone: Match shift types
 ffe4f55aa1bb18cc2793a4335450f34c33c9d01c [RSIC-V] Fix 32bit riscv with zbs extension enabled
 cc01a27db5411a4fe354a97b7c86703c5bc81243 middle-end: Allow backend to expand/split double word compare to 0/-1.
 190776773516955df480bfa75731c34c5aaf2306 c++: Add support for __real__/__imag__ modifications in constant expressions [PR88174]
-5239e2bd48fb1e6a1d1b06a1bac49bee0a742e98 vect: Don't allow vect_emulated_vector_p type in vectorizable_call [PR106322]
 e230261073950e554319f56716d2b17c09a28658 soft-fp: Update soft-fp from glibc
 27d68a60783b52504a08503d3fe12054de104241 RISC-V: Support _Float16 type.
 bd159a7660bf1cac2b884ffbf6667bb64189017f RISC-V: Support zfh and zfhmin extension
@@ -676,7 +146,6 @@ e8089aff3602447cd66ea723802d43cec4e7ec02 RISC-V: Add RVV constraints.
 8fe75147a948ceab6fb9afbe0ee698517ce1dda0 RISC-V: Add csrr vlenb instruction.
 e8c83ab9d5142a305bbd75c7ff0e41eae38433df RISC-V: Add vector registers in TARGET_CONDITIONAL_REGISTER_USAGE
 ca8f4e8af148694ae2fd444a0cdcf713910d23fd middle-end: Add MULT_EXPR recognition for cond scalar reduction
-953e08fde44a596e4ec2491efd15cd645e1ddc48 Fix up dump_printf_loc format attribute and adjust uses [PR106782]
 d2694766dcfff0278fa93d581340a10b150c0f44 vect: Try to remove single-vector permutes from SLP graph
 7e0db0cdf01e9c885a29cb37415f5bc00d90c029 STABS: remove -gstabs and -gxcoff functionality
 5ca9980fc86242505ffdaaf62bca1fd5db26550b Add TARGET_COMPUTE_MULTILIB hook to override multi-lib result.
@@ -705,7 +174,6 @@ b2fe02b476afc1cddb3abcf26ec4b1e072a9401b RISC-V: Add RVV machine modes.
 7d4df630c6cfb1909288a2796ec2f8b9ec4e8486 RISC-V: make USE_LOAD_ADDRESS_MACRO easier to understand
 323c38c915f34883439e9e53b9eac5fe07cb8378 Fix typo in chapter level for RISC-V attributes
 1b74b5cb4e9d7191f298245063a8f9c3a1bbeff4 [RFA] Minor improvement to coremark, avoid unconditional jump to return
-78bc6497fc61bbdacfb416ee0246a775360d9af6 Fortran: error recovery while simplifying intrinsic UNPACK [PR107054]
 03f3365742a9341992f0c8fc751e2d143e49f95d RISC-V: Add ABI-defined RVV types.
 f758d447d7f4699253c9f8ee345ba9b8357cdb22 Check nonlinear iv in vect_can_advance_ivs_p.
 32f86f2b54dc97cb6a40edef421b6a30c3bd1c04 RISC-V: Add '-m[no]-csr-check' option in gcc.
@@ -746,7 +214,6 @@ ba281da28d34f9a78a07f6ee56ad2c754447966e libstdc++-v3: Implement {,b}float16_t n
 5d6e834ecf212e7fc6f585b154af224d2e38c749 vect: Simplify first for shifted value generation [PR107240]
 5362b5cc8dba9de70904613fff1d5391a9c087ce Avoid PHI - PHI recurrence in vectorization
 e10ca9544632dbff4759b4b92886cd96d0b9bdfe vect: Fix vectype when widening container type in bitfield pattern [PR107326]
-ecb20df4fa6d99daa635c7fb662dc0554610777e Fortran: error recovery with references of bad array constructors [PR105633]
 cbd505700e09cfea8bdaa93ad6bd0514372e9034 RISC-V: Add RVV intrinsic basic framework.
 f56d48b2471c388401174029324e1f4c4b84fcdb RISC-V: Add RVV vsetvl/vsetvlmax intrinsics and tests.
 fa553ff26d96f6fecaa8f1b00649cfdc6cda5f5a match.pd: Fix up gcc.dg/pr54346.c on i686-linux [PR54346]
@@ -757,7 +224,6 @@ bdac4b47cbdac52c7082c02f54ed07197161cb4d RISC-V: Add type attribute for atomic i
 f84e4fb44aa26b71fbc64e0532fd24d96e5caa3f RISC-V: Replace CONSTEXPR with constexpr
 6bfea64164c3f1989d34656ab96d03a7cda2143e RISC-V: Support (set (mem) (const_poly_int))
 97d1ed67fc6a5773c8c00875bfa3616a457cf5f9 RISC-V: Support --target-help for -mcpu/-mtune
-65e3274e363cb2c6bfe6b5e648916eb7696f7e2f c, c++: Fix up excess precision handling of scalar_to_vector conversion [PR107358]
 5a20a4705c960ac323d1fe25f766e1204e0c98bd riscv: fix cross compiler
 958014f369c8817184af110f8eb2c433a712fd0a vect: Fix wrong shift_n after widening on BE [PR107338]
 19295e8607da2f743368fe6f5708146616aafa91 tree-optimization/100756 - niter analysis and folding
@@ -774,7 +240,6 @@ ac96e9068ce7dcaca992fde7f1551ffe8837b723 RISC-V: Target support for z*inx extens
 a33d623d2d3a78f5ef6f9e854946303e063eef63 c++: Fix ICE on g++.dg/modules/adl-3_c.C [PR107379]
 225f9c8805fb1ba68a877383095f38a9563526ee testsuite: Adjust vect-bitfield-read-* with vect_shift and vect_long_long [PR107240]
 0607307768b66a90e27c5bc91a247acc938f070e Fix target selector syntax in 'gcc.dg/vect/bb-slp-cond-1.c'
-11e811d8e2f63667f60f73731bb934273f5882b8 OpenACC: Don't gang-privatize artificial variables [PR90115]
 826df6d0cc706bf83cdb228b43f9b4890e8b2fbd Adjust gcc.dg/vect/pr100756.c for V8SI and V16SI
 084128583212bd64308f50c2ab5f4c03be40e48c tree-optimization/107435 - ICE with recurrence vectorization
 95decac3ce8c8c7c5302cd6fac005a10463de165 vect: Reject non-byte offsets for gather/scatters [PR107346]
@@ -835,7 +300,6 @@ f7a41b5cfd7406da1f2e5a0f1f813521d3dc2bb2 RISC-V: fix stack access before allocat
 ffabce849033e57ebaf60029822b81e981681c21 Couple of testsuite adjustments
 063ba138eaa15ceecf23a24906e0e19be98d509d tree-optimization/106995 - if-conversion and vanishing loops
 81cf0354d5f81f2c7600a3bc7ae4600757286995 libstdc++: Remove unnecessary tag dispatching in std::vector
-cca06f0d6d76b08ed4ddb7667eda93e2e9f2589e libstdc++: Avoid bogus warning in std::vector::insert [PR107852]
 7c01d029fca669263b9c2dcb8837c42f7ae3a77f Make Warray-bounds alias to Warray-bounds= [PR107787]
 fa144175c9ccaa10d7021d00f97aaa9eac59afec RISC-V: Add duplicate vector support.
 3b16afeb3f6aacf64b9f9c50b7cb9805a9dfff63 RISC-V: Add attributes for VSETVL PASS
@@ -880,7 +344,6 @@ b47b33c799bd4874a4c81fb71708ff1c3dd150ff RISC-V: Remove side effects of vsetvl p
 a143c3f7a61c61bb5a5e099fdb59f3adbf99b6b3 RISC-V: Support vle.v/vse.v intrinsics
 16eb1f43ab4e521ed4503e7766eee25da75eaeba RISC-V: Fix vle constraints
 bd1fc4a219d8c0fad0ec41002e895b49e384c1c2 c++: template friend with variadic constraints [PR107853]
-fd1b0aefda5b65f3f841ca6e61ccea6a72daa060 tree-ssa-dom: can_infer_simple_equiv fixes [PR108068]
 12b23c718cd29924a18e8cdd6790a9c04801c5f5 RISC-V: Fix ICE for avl_info deprecated copy and pp_print error.
 681a5632e0afaa24cc2a3d50a30be08d27dbfd35 RISC-V: Fix ICE of visiting non-existing block in CFG.
 3d365acf982e50588f944c46a46ec2fff59f5798 RISC-V: Add riscv_vector.h wrapper
@@ -892,17 +355,14 @@ b0a32b6e1b971ad9bfa97599d54f837fd16981dd Fixed typo in RISCV
 31ec203247413f150d5244198efd586fc6d2ef5e RISC-V: Return const ref. for vl_vtype_info::get_avl_info
 3b6cac2b44b384cd2091eaeaebeb3478c253a25d Compute a table of DWARF register sizes at compile
 0425ae780fb2b055d985b5719af5edfaaad5e980 OpenMP: GC unused SIMD clones
-345dffd0d4ebff7e705dfff1a8a72017a167120a generic-match-head: Don't assume GENERIC folding is done only early [PR108237]
 cccef0517f3a73f638a96ee879e94ff2bece7298 ada: Update copyright notice
 554bb9b61e2b76d4ace16a3f766b98ea887b17f4 tree-optimization/108314 - avoid BIT_NOT optimization for extract-last
 c389991432da2bcc335a2b4fb7e502d28a6b3346 ipa: Sort ipa_param_body_adjustments::m_replacements (PR 108110)
 b073f2b098ba7819450d6c14a0fb96cb1c09f242 tree-optimization/99412 - reassoc and reduction chains
 fd1f5373b8647a5da2f7f4b42282e676a4b04d98 PR tree-optimization/92342: Optimize b & -(a==c) in match.pd
 42d3f74323800d2ce5853dfb9180a5be1ff28d04 libstdc++: Enable string_view in freestanding
-98b41fd4045b7856e7b85dd58d67c600bd909379 c, c++: Allow ignoring -Winit-self through pragmas [PR105593]
 c841bde5ac2bd8915ecc974ff7623c8954fc1cf3 riscv: Fix up Copyright lines [PR108413]
 4798080d4a3530d985efef68aa2e04ec7549b3c1 Add c[lt]z idiom recognition
-e94e9944f59b00de455bb719fd0c5281c5509be6 install.texi: Bump newlib version for nvptx + gcn
 ad4f8c4e375dd7603382ed3ff95bd184e1959918 tree-optimization/108482 - remove stray .LOOP_DIST_ALIAS calls
 47b269caf87904fd0112e8c9e96884dd0313ed15 modula-2, driver, Front end: Revise handling of I and L paths [PR108182].
 72e46b3c7ad5e3d2c69868a510c00707c356106a c++: vector of class with bool ctor [PR108195]
@@ -976,7 +436,6 @@ e9b5a85238ac0a5b2df7f6b68b3e5a66f58f6988 RISC-V: Add vloxei64 C++ API intrinsic 
 a190f583050630802438bce9aa854fdfa7a4433c RISC-V: Simplify testcase condition for RVV tests [NFC]
 e66fec8e6ba35edf01f86c2bf6514109aba4ded2 gccrs: const folding port
 245ce6f26a1688ad69a1802ec50fa865db409eec gccrs: Add guards against getting data from an empty vector
-2bb444787ed17a9e786f544cdf51ee2ac6779ab2 vect: Fix single def-use cycle for ifn reductions [PR108608]
 2a937fb5cf805c7311f1d9ecf98b60bedc922165 RISC-V: Add integer binary vv C/C++ API support
 2db1fd76ebaa6da8c868bb610b3e36d1ef504036 RISC-V: Add vxor.vv C API tests
 88a4dc078ad16b94e5f4c93d84c02fddf7d7936a RISC-V: Add vsub.vv C API tests
@@ -1001,22 +460,18 @@ f4f00e44fd392ee75b45de7522027c1de3c43a75 RISC-V: Add vrem*.vv C++ API tests
 e2e93b9dee938f4f757cf2f1dae09a8cd77eded4 RISC-V: Add vmin*.vv C++ API tests
 a97767c30b1f7e58a32f80440420f59260b50dbf RISC-V: Add vmax*.vv C++ API tests
 77906341efc5cb69aada0645c22850bc83c1d42c RISC-V: Add vdiv*.vv C++ API tests
-e4473d7cf871c8ddf8f22d105c5af6375ebe37bf ree: Fix -fcompare-debug issues in combine_reaching_defs [PR108573]
 209f02b0a9e9adc0bf0247cb5eef04e0f175d64e Don't peel nonlinear iv(mult or shift) for epilog when vf is not constant.
 a02aacf55a35876ddc1e534778dc37fae29054f6 RISC-V: Fix bug of TARGET_COMPUTE_MULTILIB implemented in riscv.
 61122017132366189b43bc15402c34d5d9615024 RISC-V: Add RVV shift.vx C/C++ API support
 fae260ebfb19c7cabadda38e40f37b85ed93768e RISC-V: Add vsrl.vx C API tests
 f890b9e76f98b00a063a4fa9913c715fa3196ab0 RISC-V: Add vsra.vx C API tests
-07fba8d6f2da481c8d2915e66d49525c65ca04d6 RISC-V: Add vsll.vx C++ API tests
 6c93c1fb3969648cb9b4e330c796d6520aa0c9e8 RISC-V: Add shift constraint tests
 b0a2abcd79e3c5ec63ac5b94e8b834c91693f612 RISC-V: Add vsrl.vx C++ API tests
 f08acad732e35396136f9fe3a23f52ec85ca56ce RISC-V: Add vsra.vx C++ API tests
-d8bd2c5f22eaa96b703531c41f7c2e6685d43584 RISC-V: Add vsll.vx C++ API tests
 f3a10f4fff3d6751aa65df58b8629f84a0c04545 RISC-V: Fix constraint bug for binary operation
 167b04b9b8a2becfd23b8ccf7f09016bbd013e12 RISC-V: Remove unnecessary register class.
 cad2412cc84518195fceb2db31e82e6df7e5a2c2 cgraph: Handle simd clones in cgraph_node::set_{const,pure}_flag [PR106433]
 740a3be7df29b280f39a04c441fd4917af4eef5e vect: Check gather/scatter offset types [PR108316]
-6ad1c1027628f094260037536f6b6fcdb63b5add vect-patterns: Fix up vect_widened_op_tree [PR108692]
 a035d133809430d2b2019d5de6c42d358eb8c7aa RISC-V: Add binary vx C/C++ support
 649107f6d1f0d5cefa623f41eb6b69f3c8f89580 RISC-V: Add vmul.vv C API tests
 1b0bd520f5ab03807c0be297d2d210bed2e44cc7 RISC-V: Add vmul.vv C++ API tests
@@ -1102,8 +557,6 @@ b81d711d189238d726ee7758bff40759d08b5d6d RISC-V: Add vmulhsu.vv C++ API tests
 f18e96e6188242a4e1a4b0320aad5de8ca6d15fa RISC-V: Add vmulh.vx C++ API tests
 d88110b07e73f9065a2e1d7b1ef306f628e65405 RISC-V: Add vmulh.vv C++ API tests
 a1e42094e7ac684e556e3a1246516bce5ed5ecee RISC-V: Add integer widening instructions
-9aa6c67dea4fd4ace1eaba5c303c010cfe26e61b RISC-V: Add vwsubu.wx C API tests
-f98b4bc59b8a0b7e95b06071efcb526dab40e54e RISC-V: Add vwsubu.wx C API tests
 9b1807548918dd4a1c6f88493dcce440990ab03c RISC-V: Add vwsubu.vx C API tests
 8aa1e133b1257e8485526c9d902a599f496a52e1 RISC-V: Add vwsubu.vv C API tests
 931b3d88313661128946775f9e8517c76111d891 RISC-V: Add vwsub.wx C API tests
@@ -1185,8 +638,6 @@ e8a0c9e9d41fb39d150c6c5a4bfbb8a0639b14c4 RISC-V: Add vaadd.vx C++ API tests
 2cd7cbaf51f0057d570406b2540796161af756a6 RISC-V: Add vaadd.vv C++ API tests
 52009fa79cdb497b9e410bb4a5b54960a4a44463 RISC-V: Change the generation mode of ADJUST_SP_RTX from gen_insn to gen_SET.
 89367e794613bdeb21df3e6fc0215f0acd553ef8 RISC-V: Handle vlenb correctly in unwinding
-3cac06d84f334705ed0bce12fbc3a4cec4a8fd3b lra: Replace subregs in bare uses & clobbers [PR108681]
-b9c78605039f839f3c79ad8fca4f60ea9a5654ed vect: Make partial trapping ops use predication [PR96373]
 26f4b055d97804666d6d144b2af9b9dee0854354 testsuite: adjust patterns in RISC-V tests to skip unwind table directives
 994224236e0231807681b62e880d3c2772c69521 tree-optimization/108782 - nested first order recurrence vectorization
 ec23e9e25eb64bb066dc408fd498861b8587bec8 target/108738 - STV bitmap operations compile-time hog
@@ -1269,8 +720,6 @@ af46073dbe83d88e2d93d967da447346b22c70bb Fix memory leak in if-conversion
 ef22c3e90b5010a5229e70907ad2087f774fdfc0 Change vec<,,vl_embed>::m_vecdata refrences into address ()
 2dd68cddbc745de2c4a4b4982673122716c8231c Avoid default-initializing auto_vec<T, N> storage, fix vec<vl_embed>
 85203d52bfa4a84da5f50e0a242891308ffa8d83 tree-optimization/108970 - ICE with vectorizer peeling
-520403f324a6ed8b527f39239709dd0841b992e2 cfgexpand: Handle WIDEN_{PLUS,MINUS}_EXPR and VEC_WIDEN_{PLUS,MINUS}_{HI,LO}_EXPR in expand_debug_expr [PR108967]
-2a8ce4b52f5892a10a02b94d7be689e59a444ff6 vect: Fix voluntarily-masked negative conditionals [PR108430]
 076d309e36c682176e9f85dc8593e6f2c9e6e75f vect: Don't apply masks to operations on invariants [PR108979]
 51af8a6401eea726d3498e6b2aba456b6af246d6 d: vector float comparison doesn't result in 0 or -1 [PR108945]
 929c6b8cd12a3bd338a4c250274a9d86da5b2ea7 d: Allow vectors to be compared for identity [PR108946]
@@ -1329,7 +778,6 @@ a481eed8fd01837cdf011ea9a17853505080a888 RISC-V: Fix wrong vsetvli fusion for vm
 cd0c433e5faba9a18f64881cd761a53a530aa798 RISC-V: Fix LRA issue for LMUL < 1 vector spillings [PR109244]
 37dd1f14b6e0e7775973e0f31876066f503f5b21 RISC-V: Fix loss of function to script 'multilib-generator'
 3a982e07d28a46da81ee5b65b03a896d84b32a48 RISC-V: Bugfix for rvv bool mode size adjustment
-484c41c747d95f9cee15a33b75b32ae2e7eb45f3 tree-vect-generic: Fix up expand_vector_condition [PR109176]
 378ec7b87a5265dbe2d489c245fac98ef37fa638 [testsuite] test for weak_undefined support and add options
 07fc3491260e6b5d261433c977a4e069f5ab40c1 match.pd: Fix up fneg/fadd simplification [PR109230]
 50a36a9541526708881f2ac0c4f180506bcf80bb Docs, OpenMP: Correct internal documentation of OMP_FOR.
@@ -1343,7 +791,6 @@ fe42e7fe119159f7443dbe68189e52891dc0148e Rename ufix_trunc/ufloat* patterns to f
 608388486a54afe98aed0f105a6101ae7a9ff66c RISC-V: Fix missing file dependency in RISC-V back-end [PR109328]
 db4f7a9b47d148b5074ac15910124c746fb7a96f RISC-V: Fix ICE and codegen error of scalar move in RV32 system.
 802ab7d0db5b5aa46edc8d82526d97258c599927 RISC-V: Fix reload fail issue on vector mac instructions
-63e95a83cedd95e4b054dbd602082b0622e55a33 RISC-V: Fix typo
 840354060e23ff28d325af2b8422233ce14f40f8 riscv: Fix bootstrap [PR109384]
 4f81edad41caea4ddd269555f88790cec28cc9d9 RISC-V: Fix typos
 fdc5abbdcfb65d415af6c40230f8f07872e51e49 [PATCH] RISC-V: Fix PR109399 VSETVL PASS bug
@@ -1507,7 +954,6 @@ a04bf39f61ce7814d197d712760f08c206daf4f1 vect: Don't retry if the previous analy
 01d62e9b6c3e9fd3132f1616843103ccf81778ed RISC-V: Add rounding mode enum for fixed-point intrinsics
 24bd7168112f96e363cacaf593b3ac0c38c238f9 RISC-V: Introduce rounding mode operand into fixed-point intrinsics
 e682d300261c0f2c8a5cc51151adabfe98e1006c RISC-V: Add mode switching target hook to insert rounding mode config for fixed-point instructions
-6da6ed95c9ca247d405da3dfb737b743686fe5e6 RISC-V: Remove masking third operand of rotate instructions
 7b0073c6a4c21a558936c06a06ab1c6def9769ae RISC-V: Remove trailing spaces on lines.
 b14af304965c20111ebd01d0c916353c927d9151 Machine_Mode: Extend machine_mode from 8 to 16 bits
 c072df1ab144506cd8bb0ac81fb8f1aad69f0bd2 Fortran: Narrow return types [PR78798]
@@ -1517,7 +963,6 @@ ca2007a9bb3074146780fc1e1382c7f73eb6d71b gcc: use _P() defines from tree.h
 64d6a4dfd983377c6a91f1711ead71dc59aaefac RISC-V: Allow more loading of const vectors.
 e430b32528d03fc655142525793639f6aeb31590 RISC-V: testsuite: Remove empty *-run-template.h.
 c104ef4b5eb1f781bbef953e3c282ef1ca94c4f1 RISC-V: improve codegen for large constants with same 32-bit lo and hi parts [2]
-259b4b7d349dd3fd560144bd4617f526458b45dc RISC-V: Remove masking third operand of rotate instructions
 9000da00dd70988f30d43806bae33b22ee6b9904 RISC-V: Fix CTZ unnecessary sign extension [PR #106888]
 31cc55f4ff32475f8552205cbf341d4af8bb4fb7 Add bext pattern for ZBS
 55914b016de8c8514c58eb59822677a69e44135c Fix riscv_expand_conditional_move.
@@ -1590,13 +1035,11 @@ bf9eee73f3d849e249fd7eb1fd9ebe7314bbbc62 RISC-V: Support RVV permutation auto-ve
 91430b73a059f58de83a82bba1a9ec2b750c48f9 RISC-V: Add vwadd.wv/vwsub.wv auto-vectorization lowering optimization
 d5ea84cdd9a45e83b144442cdf9eb50efea9e28e RISC-V: Add __RISCV_ prefix to VXRM and FRM enum
 691805ff8aa4cba5bded97821b61750a07b31ca4 RISC-V: Add test for vfloat16*_t (non tuple) types
-37ff12b96d7c1ee5fe135253c7b9db7e2ba61b71 RISC-V: Fix warning in predicated.md
 265357d401fb7215e8fea820d29a48eacdd75ad1 RISC-V: Optimize reverse series index vector
 a06b9435b9652ea1b0d30e6fa176c91df314954f RISC-V: Add _mu C++ overloaded intrinsics for load && viota && vid
 bffc52838e393a775e13dc48162669b0f43ebe09 VECT: Change flow of decrement IV
 9f926f3a0c8dee7edb6807323a1fe2a92b33bfaa doc: clarify semantics of vector bitwise shifts
 2e3401bd71b59ca0e03f051c5db286c32299b940 RISC-V: Add pseudo vwmul.wv pattern to enhance vwmul.vv instruction optimizations
-f5c82bff5ef2930583eccc008cf73653720987b5 RISC-V: Fix warning in predicated.md
 e1d2493f5912c340b50f49e4c2d928870faa172b Remove unnecessary md pattern for TARGET_XTHEADCONDMOV
 5681872057f0b725ec8a7c8a1eec8fee205ad673 [RISC-V] fix cfi issue in save-restore.
 8bdfa8a67a54545be1d90c46fb88a676695f25dc RISC-V: Support RVV zvfh{min} vfloat16*_t mov and spill
@@ -1667,7 +1110,6 @@ a07dadba85f1b15e270c227dfa70e2fdf331494f RISC-V: Add comments of some functions
 27612ce352921d74086102d9ad4d3e011923f837 RISC-V: Fix one warning of maybe-uninitialized in riscv-vsetvl.cc
 dd6e1cbac8682106c5167c105f2807014288b852 RISC-V: Fix VL operand bug in VSETVL PASS[PR110264]
 d0cf0c6c8449009697ad29dd7cb60e7f655628f2 RISC-V: Bugfix for RVV integer reduction in ZVE32/64.
-8a96f240d71d367a2955ab9e0f0fef3a0b0e2a74 RISC-V:Add float16 tuple type support
 fcf4e50f852e6c3e7ce777573b282c26b85a7d77 RISC-V: Fix one typo for reduc expand GET_MODE_CLASS
 85c39a3cf157916ac494e8e90ad1df2cb6bf5cf2 AVX512 fully masked vectorization
 c3e720887eca17342b0c7870d69687caf9e5269f RISC-V: Add (u)int8_t to binop tests.
@@ -1709,7 +1151,6 @@ d39f4889cc24c5c96cf9112045298e0945b9932c VECT: Apply LEN_MASK_{LOAD,STORE} into 
 b2e075a594e93a4fc89de8fa53db5c32a4de83b5 text-art: remove explicit #include of C++ standard library headers
 0a3b1a095d451427571299fc78f29dec94c6931c RISC-V: Support RVV floating-point auto-vectorization
 95a2e5328e5aa15724ab8da4aa622a0bfc40c9e5 RISC-V: Refactor the integer ternary autovec pattern
-f9ab5d62c94547499de52c800ab914cc8e802212 RISC-V:Add float16 tuple type abi
 c79476da46728e2ab17e0e546262d2f6377081aa Refine maskloadmn pattern with UNSPEC_MASKLOAD.
 ae10eb041da70d39f9cd0feb1b704e5c9d6a62aa Revert "RISC-V:Add float16 tuple type support"
 319e6fe96027f53719fd07b5ed057100b19ac802 Revert "RISC-V:Add float16 tuple type abi"
@@ -1763,11 +1204,8 @@ eab57b825bcc350e9ff44eb2fa739a80199d9bb1 Fix handling of __builtin_expect_with_p
 8cb087d869be698a86b082a7248d03e468ef1eb1 testsuite: Add vect_float_strict to testcase [PR 110381]
 bd7e9856fe5bbeb487797476c4fffb660f63cf4f tree-optimization/110506 - bogus non-zero mask in CCP for vector types
 000590c074615cbfffb6ad854a6474e623801460 tree-optimization/110506 - ICE in pattern recog with TYPE_PRECISION
-3d95a524d4746ceb3065f92f30a5679afb88d16a RISC-V: Fix one typo of FRM dynamic definition
-47e6dcb597b2d4abcab13c9dea0cc7d2131b6419 RISC-V: Support vfwnmacc/vfwmsac/vfwnmsac combine lowering
 14fa8c1d651a2e9fd3d9e75ab746589a36c86986 Revert "RISC-V: Support vfwnmacc/vfwmsac/vfwnmsac combine lowering"
 bc32918b063b9fa3dffc8815478a81df6ad999ca RISC-V: Support vfwmul.vv combine lowering
-49485639c25c77b116d35c2f9c3dbfb8bf4cf814 RISC-V: Support vfwnmacc/vfwmsac/vfwnmsac combine lowering
 b8806f6ffbe72ed8fb7aba3b3a9196ec4d13e614 Middle-end: Change order of LEN_MASK_LOAD/LEN_MASK_STORE arguments
 7c521f6751e47d9dfaca2c8288c65f94e2f54d3d RISC-V: Add support for vector crypto extensions
 33245d6b87a284495304c9952813b6b83d5df99f libstdc++: Qualify calls to std::_Destroy and _Destroy_aux
@@ -1779,8 +1217,6 @@ f703d2fd3f03890a180e8cc04df087c208999e81 middle-end/110495 - avoid associating c
 729aa4fa48d627c4344764676edad3b65d40a003 tree-optimization/110436 - bogus live/relevant for unused pattern
 2c12ccf800fc7890925402d30a02f0fa9e2627cc PR tree-optimization/110531 - Vect: avoid using uninitialized variable
 6eea7eaf11e2b04670c4bb75f48600747dd76768 Remove unnecessary check on scalar_niter == 0
-0af87afb3fd10c6fcfbed3ba85d575889477a968 RISC-V:Add float16 tuple type support
-8377cf1bf41a0a9d9d49de807b2341f0bf5d30cf RISC-V:Add float16 tuple type abi
 4870a18ac2d5e0bd8515ea473006071e65622e52 libstdc++: Use RAII in std::vector::_M_default_append
 450b9566d5888931aa6f8bee9799c0b60abf75c8 Fix typo in vectorizer debug message
 a9c6db31cbe9bedd2dde1c50a7007a67750a0f50 adjust testcase for now happening epilogue vectorization
@@ -1800,7 +1236,6 @@ f2b37c8a38e44696287b19856bcbbf52e8b004f8 VECT: Fix ICE of variable stride on str
 deebf06a1207bf7d84f4bebc462137d9436ee6dd tree-optimization/110563 - simplify epilogue VF checks
 224fd59b2dc8a5fa78a309a09863afe9b3cf2111 Vect: use a small step to calculate induction for the unrolled loop (PR tree-optimization/110449)
 d4c2e34deef8cbd81ba2ef3389fdbaf95c70e225 Improve scale_loop_profile
-f58819c9aabfe23fa0e6ba422b39a00a980f991e RISC-V: Fix one typo of FRM dynamic definition
 55900189ab517906efe08f8d17f3e4a310ee7fff RISC-V: Fix one bug for floating-point static frm
 5966349aa7e1fcbee2558f996b2484b433a0fcf4 Fix epilogue loop profile
 63ae6bc60c0f67fb2791991bf4b6e7e0a907d420 vect: Fix vectorized BIT_FIELD_REF for signed bit-fields [PR110557]
@@ -1858,9 +1293,7 @@ e6a1b23872995d5344a81cff1857bc861ffee71d RTL_SSA: Relax PHI_MODE in phi_setup
 6bab2772dbc42ce7a1b29b03ae84e6e434e23c4e Tighten regexps in gcc.target/riscv/_Float16-zhinx-1.c .
 615c2e555d34c2b17513c869b309b8f398376874 IBM zSystems: Optimize vec_cmpge followed by vec_sel
 74dc7f1a94e06095108b0ac30ca35d98f3a4bb9c RISC-V: Remove testcase that cannot be compiled because VLEN limitation
-3a407070b610a8943bd26789b4c1446d28f355ac MAINTAINERS: Add myself as riscv port reviewer.
 48b7404707186856523b908f1720488bf87f6b49 RISC-V: Enable SLP un-order reduction
-0a9f30c50a1ee539372fb4f6db3e8db229fc2ff8 MAINTAINERS: Add myself as riscv port reviewer.
 bd93ef7f1a178079c6cdaccdf953f79a3365b028 RISC-V: Dynamic adjust size of VLA vector according to TARGET_MIN_VLEN
 c5c7f1ef5ffcabb7dcbdc96571dbe1b0d675d4a5 RISC-V: Fix testcase failed when default -mcmodel=medany
 c283c4774d1cbfd12c2a15b51b18347463694ad0 RISC-V: Throw compilation error for unknown extensions
@@ -1913,8 +1346,6 @@ b9d7140c80bd3c7355b8291bb46f0895dcd8c3cb loop-split improvements, part 1
 1d6af545bf7fa34c9bdd17b41e81abd019d073a8 RISC-V: Remove vxrm parameter for vsadd[u] and vssub[u]
 b24acae8f4d315a5b071ffc2574ce91c7a0800ca loop-split improvements, part 2
 fdbb0863b6111ad3f45b79f47ebfe471555b2c4a RISC-V: Specify -mabi in rv64 autovec testcase
-7ed98195f3f5c23948fff7ecc720127485490397 Fix profile update after vectorize loop versioning
-5ffa9d0a5e22f6f763b7f04877a940689e7abcba Fix profile update after vectorize loop versioning
 92a891e869d35c940d2a7b92355af02d78c9a86e RISC-V: Enable basic VLS auto-vectorization
 9f63862184b14a5f04a6e91c8c055687f2720d73 RISC-V: Bugfix for RVV floating-point rm suffix sequence
 1349f530753be963043d77c1d51da161133d5afe RISC-V: Return machine_mode rather than opt_machine_mode for get_mask_mode, NFC
@@ -1944,10 +1375,6 @@ d61efa3cd3378be38738bfb5139925d1505c1325 [committed][RISC-V] Remove errant hunk 
 d6ac3aae2a32869d9d37f3bc7783d9bbad27d72b Update loop iteration estimates after splitting
 b7ab3938c638bf5aacfe926ed19aba1627702a71 RISC-V: Support RVV VFDIV and VFRDIV rounding mode intrinsic API
 dd03fb9962e4776286d7654df09549c0e712465e RISC-V: Support RVV VFWMUL rounding mode intrinsic API
-51e5a5cefb11d8a7b2216e866abcc225ba16d127 RISC-V: Support RVV VFMACC rounding mode intrinsic API
-62d9c1dd8eb1152d8fbe0e1df101b99c9141417a RISC-V: Support RVV VFNMACC rounding mode intrinsic API
-dccd7e8a7215f3f2e295e11b20680d3add08cd7e RISC-V: Support RVV VFMSAC rounding mode intrinsic API
-236ec7aac051a062dc961b3c1482925893ee6e21 RISC-V: Support RVV VFNMSAC rounding mode intrinsic API
 098d6fbe6477820f32e1ca3eb3de870ef4861b89 Revert "RISC-V: Support RVV VFNMSAC rounding mode intrinsic API"
 b87a4739a4c043e8063f2955a706b949dcc20dae Revert "RISC-V: Support RVV VFMSAC rounding mode intrinsic API"
 7a6b4d87d8aa50ef644414fe224c3540c540c2d4 Revert "RISC-V: Support RVV VFNMACC rounding mode intrinsic API"
@@ -1982,12 +1409,8 @@ e5fe7f2fd69d5a950d8c1e2a068669bda376b2d4 RISC-V: Remove non-existing 'Zve32d' ex
 6bdbf1722a312b90a48dea19af545815f0069e86 RISC-V: Add missing modes to the iterators
 9b8ebdb60c463fa3641692a21ca0ce24fba89260 Remove insert location argument from vectorizable_live_operation
 887f13916b18f46b563d527ad5001c6384e44a60 RISC-V: Support TU for integer ternary OP[PR110964]
-07e93224f5dceb3423f38a58c2a1923c200cd5c8 RISC-V: Support RVV VFMACC rounding mode intrinsic API
-6176527a7528ec626fa1e7afb381124867881388 RISC-V: Support RVV VFNMACC rounding mode intrinsic API
 da7b43fb0224cdce5157a747fdd6975b7c81c6cf RISC-V: Add MASK vec_duplicate pattern[PR110962]
 0ac323238e91c6093709ce8f4176c0c8fb1a693d RISC-V: Add Ztso atomic mappings
-ee8a844d02e39912e0a303bcf46a0584d144ad6a RISC-V: Support RVV VFMSAC rounding mode intrinsic API
-cd9150e2a821ec67a04844b7b2c1946b64994aa4 RISC-V: Support RVV VFNMSAC rounding mode intrinsic API
 797334e931362174eb8ad15ded79cdf8e846e744 RISC-V: Support RVV VFMADD rounding mode intrinsic API
 bcda361daaec8623c91d0dff3ea8e576373b5f50 RISC-V: Support RVV VFNMADD rounding mode intrinsic API
 59d789b34810d43ddba734e4adb80c29c210e49c VECT: Add vec_mask_len_{load_lanes,store_lanes} patterns
@@ -2011,7 +1434,6 @@ c944ded09595946290778a26794074e69cc65f3e RISC-V: Support RVV VFWNMSAC rounding m
 469711f06865979854e587263d3d43137f256b57 RISC-V: Support RVV VFREC7 rounding mode intrinsic API
 d5ef0ee307058c5efade84e45228a7576c0141c7 Mode-Switching: Fix SET_SRC ICE for create_pre_exit
 9ca0ff5e0988c62fe3080e3f4f99edecac37dff8 vect: Remove several useless VMAT_INVARIANT checks
-a74d0d36a3f3373096963bb7a4c7ebbcab01221d vect: Move VMAT_LOAD_STORE_LANES handlings from final loop nest
 bcdbedb3e6083ad01d844ed97cf19645c1ef6568 tree-optimization/110991 - unroll size estimate after vectorization
 8a6097c7425c4b6294e11dea062df7a883343f47 Use find_loop_location from unrolling
 f049868d8db773da4be61d82025e97453d6e9f2b Support constants and externals in BB reduction vectorization
@@ -2049,7 +1471,6 @@ c43916857c6586e65f10713fdc5a65909918a8cc RISC-V: Forbidden fuse vlmax vsetvl to 
 86d80395cf3c8832b669135b1ca7ea8258790c19 RISC-V: Revert the convert from vmv.s.x to vmv.v.i
 3709ca091bec43ee3203b96146585652c5d84728 RISC-V: Add the missed half floating-point mode patterns of local_pic_load/store when only use zfhmin or zhinxmin
 b4c8c551c48f5f29d9a719c4c7fc4fa4cec28fe7 RISC-V: Fix -march error of zhinxmin testcases
-7cd2df4dc0b53c172d04bc7f238ce55775fbb7df vect: Move VMAT_GATHER_SCATTER handlings from final loop nest
 f5f47cc1ce75b00427756939a2dab94d3d125f6a tree-optimization/111048 - avoid flawed logic in fold_vec_perm
 ac8d3c7c5cd210bef20195346864307660cfa950 vect: Factor out the handling on scatter store having gs_info.decl
 70c50c87273d940918225d5c6b03f1ccfb6f978e MATCH: Sink convert for vec_cond
@@ -2079,8 +1500,6 @@ ea1eb12a38f09e494d5ef072e55653a6463d57eb RISC-V: Add attribute to vtype change o
 29487eb237b893c673e9ecc6409b175e22792f13 RISC-V: Fix VTYPE fuse rule bug
 3beef5e6b5b12b5c90040c8485f1836e2dd6cf83 RISC-V: Fix potential ICE of global vsetvl elimination
 82d5c7261fed3cf163945fda2c541ff985bd8dc5 vect: Remove some manual release in vectorizable_store
-69a0c51ecbb7c24fb22f9caf8ea3ee89268660e4 vect: Move VMAT_LOAD_STORE_LANES handlings from final loop nest
-af3820d10d706458633e9e232a989965de24aa49 vect: Move VMAT_GATHER_SCATTER handlings from final loop nest
 92f2ec417c57e980b92b8966226fc2bfbf042af8 RISC-V: Add conditional unary neg/abs/not autovec patterns
 18befd6f050e70f11ecca1dd58624f0ee3c68cc7 [PATCH] RISC-V:add a more appropriate type attribute
 6619b3d4c15cd754798b1048c67f3806bbcc2e6d Improve quality of code from LRA register elimination
@@ -2545,11 +1964,9 @@ d508a94167c186b2baacc679896e2809554c0b99 RISC-V: Support vcreate intrinsics for 
 36a26298ec7dfca615d4ba411a3508d1287d6ce5 Make GCN target effective-target 'vect_gather_load_ifn'
 01c18f58d37865d5f3bbe93e666183b54ec608c7 ifcvt/vect: Emit COND_OP for conditional scalar reduction.
 f6284ef38701920865de3c9e18bb3f6068fde4d1 RISC-V: Fix bug of AVL propagation PASS
-81a81abec5c28f2c08f986f1f17ac66e555cbd4b RISC-V: Refactor prefix [I/L/LL] rounding API autovec iterator
 a29ce9bf8d87e632840bacacb663ece90a5c7710 RISC-V: Add check for types without insn reservations
 1027c1c02069ef8310256d8d5521cd4703223327 Revert "RISC-V: Refactor prefix [I/L/LL] rounding API autovec iterator"
 5ea3c039b784b0676323243940fd9916b1f6d540 RISC-V: Fix redundant vsetvl in fixed-vlmax vectorized codes[PR112326]
-c3847ca0571e5ace2f1d6e3baed67fee13d9f93d RISC-V: Refactor prefix [I/L/LL] rounding API autovec iterator
 c0cf9b78573d3d353f22e5dd1c32fecdbca703b8 tree-optimization/112366 - remove assert for failed live lane code gen
 60034ecf25597bd515f8152ea85832ff95a7563b VECT: Support SLP for MASK_LEN_GATHER_LOAD with dummy mask
 95cfa2cdd1b525a5b2830206692ddb9f948000d3 Cleanup vectorizable_live_operation
@@ -2727,8 +2144,6 @@ fe276a42a73767931cae38665851e01ae3c14927 RISC-V/testsuite: Add branched cases fo
 2278c6443aa6aaa12b3682afb8ad0774575ae1b4 RISC-V/testsuite: Add branched cases for generic FP cond adds
 0f4ce86eebd031d1d8ad5bd8fc92333030ce56a1 RISC-V/testsuite: Add branchless cases for generic FP cond adds
 9a1a2e9857b144872798973fc83ef6e8648cfb08 RISC-V: Handle FP NE operator via inversion in cond-operation expansion
-4c69b5fbb98343ccd9a9f18069847b195b4b7cc7 RISC-V/testsuite: Add branched cases for FP NE cond-move operations
-f96e5fdeb65f841f99ef763f0e53a680106a8760 RISC-V/testsuite: Add branched cases for FP NE cond-move operations
 23207facbbe6da8659608b3d69544a608152a415 RISC-V/testsuite: Add branched cases for FP NE cond-add operation
 6300e672c86236720952227bc4fd6a6dc4eeb55a RISC-V/testsuite: Add branchless cases for FP NE cond-add operation
 ae098dfeeefe74968530289d9f5e3ae6f78097bb RISC-V: Remove duplicate `order_operator' predicate
@@ -2745,20 +2160,18 @@ eebcad0ac22010fc59de9d856bb02017fccab282 match.pd: Avoid simplification into inv
 aea337cf740ec33022f3cabfa7dd4333d5ba78ee RISC-V: Fix inconsistency among all vectorization hooks
 aae723d360ca26cd9fd0b039fb0a616bd0eae363 sra: SRA of non-escaped aggregates passed by reference to calls
 c2dcfb6ba6e9a84a16e63ae73a822ae2a843170c Use memcpy instead of memmove in __relocate_a_1
-4e88c4809a3e050fccd21a4fd6248160d2d0376d RISC-V: Fix typo
 ec84a1e7a18f65858a1b129ff80cb32e64cf151b RISC-V: Disable AVL propagation of slidedown instructions
 006e90e13441c3716b40616282b200a0ef689376 RISC-V: Initial RV64E and LP64E support
 e02772344815e505c8c146ce48b1427dc9e9d190 RISC-V: Remove incorrect function gate gather_scatter_valid_offset_mode_p
 061a82fa2b751b42d0d8ddfcd45367c848d3ee64 vect: Avoid duplicate_and_interleave for uniform vectors [PR112661]
 2065438db4ac13af7e0de2f934959413647f74a7 PR111754: Rework encoding of result for VEC_PERM_EXPR with constant input vectors.
-9c16ca93641ad460a576a9ed7daf2aadf596193c RISC-V: Fix VSETVL PASS regression
 f1b03fa964527678f15e6ef416bfe37e60b3dc54 match.pd: Fix parity (X) ^ parity (Y) simplification [PR112719]
 e6c01334ccfca8bc748c8de90ba2a636d1662490 testsuite: Fix up pr111754.c test
 9f3f0b829b62f11f350867d2350e2af8639ec890 RISC-V: Disallow poly (1,1) VLA SLP interleave vectorization
 f26d68d5d128c86faaceeb81b1e8f22254ad53df middle-end/112732 - stray TYPE_ALIAS_SET in type variant
 25a51e98fdd504826a40775a5e5b9ffb336b5aa1 RISC-V: Bugfix for ICE in block move when zve32f
 862867eab78d7731f725cf7fa4ba02ed5e503db1 Introduce hardbool attribute for C
-73a63efcdae4b979b4a1dcff2da7d68b905453a0 RISC-V: Add explicit braces to eliminate  warning.
+73a63efcdae4b979b4a1dcff2da7d68b905453a0 RISC-V: Add explicit braces to eliminate warning.
 bdad036da32f72b84a96070518e7d75c21706dc2 RISC-V: Support highpart register overlap for vwcvt
 b09b879e4e9cc24a5d2b0344c1930020c218a104 middle-end/110237 - wrong MEM_ATTRs for partial loads/stores
 62685890d8861b72f812bfe171a20332df08bd49 RISC-V: Support highpart overlap for vext.vf
@@ -2769,7 +2182,6 @@ a1a3939bea5b0d9cbd3465d96e7e4a5222ae6c48 Use vec_extact_lo instead of subreg in 
 b4a7c1c8c59d191bff64a720cca61d1d308af531 Support sdot_prodv*qi with emulation of sdot_prodv*hi.
 5a35152f87a36db480693884dfb27ff6a5d5d683 RISC-V: Remove earlyclobber for wx/wf instructions.
 303195e2a6b6f0e8f42e0578b61f9f37c6250beb RISC-V: Support widening register overlap for vf4/vf8
-923a67f17badcbe6e2b2e5d3570a265443258c8e RISC-V: Fix VSETVL PASS regression
 9715c545d33b3a32ddc1ae817ba9356ade1fb9df c: Turn -Wincompatible-pointer-types into a permerror
 8332b991e42dbffd1f2a7b7aa9a23f5aa242e602 Fix ambiguity between vect_get_vec_defs with/without vectype
 4418d55bcd1b7e0ef823981b6a781d7de5c38cce RISC-V: Support highpart overlap for indexed load with SRC EEW < DEST EEW
@@ -2911,7 +2323,6 @@ a657c7e3518fcfc796f223d47385cad5e97dc9a5 testsuite: un-xfail TSVC loops that che
 fd032cce216e003d58b2394f7e61b03dee27e81a middle-end: explicitly initialize vec_stmts [PR113132]
 ed60b2868abdb7932bda1dd08477c12fe62a49cb RISC-V: Move RVV V_REGS liveness computation into analyze_loop_vinfo
 f83cfb8148bcf0876df76761a9a4545bc939667d RISC-V: Some minior tweak on dynamic LMUL cost model
-87dfd70723385486645de3b8c93fa1e19143fa46 RISC-V: Fix typo
 c4ac073d4fc7474e29d085bbd10971138ee7478e RISC-V: Make known NITERS loop be aware of dynamic lmul cost model liveness information
 76f5542c48315cca5dfcbff2f22c94f8d145bde6 RISC-V: Make dynamic LMUL cost model more accurate for conversion codes
 d1eacedc6d9ba9f5522f2c8d49ccfdf7939ad72d RISC-V: Disallow transformation into VLMAX AVL for cond_len_xxx when length is in range [0, 31]
@@ -2929,13 +2340,9 @@ a43bd8255451227fc1cd3601b1f0265b21fafada RISC-V: Make liveness be aware of rgrou
 4a0a8dc1b88408222b88e10278017189f6144602 RISC-V: Fix bug of earliest fusion for infinite loop[VSETVL PASS]
 83869ff4bcd694634fca969993af4c0dbc51e2bb RISC-V: Refine LMUL computation for MASK_LEN_LOAD/MASK_LEN_STORE IFN
 73a4f67b9c8c497d87fda44160953293bc4e11e5 RISC-V: Fix misaligned stack offset for interrupt function
-b1342247a44c410ad6a44dfd82813fafe2ea7c1d RISC-V: Make liveness estimation be aware of .vi variant
 4831ad982c08a7d926263666c62cd6e52674f885 Revert "RISC-V: Make liveness estimation be aware of .vi variant"
 057dc349021660c40699fb5c98fd9cac8e168653 RISC-V: Nan-box the result of movhf on soft-fp16
 5bb18475a10d05d2aebf37db73ebf36c6912104d Add generated .opt.urls files
-3ab4c3816bd5c340b98147ffce13a7f3c161b6cd RISC-V: Make liveness estimation be aware of .vi variant
-960c2620db254a1edc2cd61e608df73073b3de0d RISC-V: Add crypto vector builtin function.
-b3ec98d458f2b285bb7b3fa4fcd93fd830fee069 RISC-V: Add crypto vector api-testing cases.
 fd946ecba7d2ec7090408b8b3ddd9d389db606e5 Revert "RISC-V: Add crypto vector builtin function."
 fc75b733dc4db9e6b73991917bc704f16be47166 Revert "RISC-V: Add crypto vector api-testing cases."
 05415dba984639cc2ca897786738d76dadd0cfb6 RISC-V: Clean up unused variable [NFC]
@@ -2947,9 +2354,8 @@ c659dd8bfb55e02a1b97407c1c28f7a0e8f7f09b Implement ASM_DECLARE_FUNCTION_NAME usi
 6cf47447f6fba84a17864fc7a19a532a62b6e736 RISC-V: Update MAX_SEW for available vsevl info[VSETVL PASS]
 e74c37aab51d2350a3417f442c3a7d119b755378 RISC-V: Use MAX instead of std::max [VSETVL PASS]
 c97436f84cef191618f61912520bc0f0d62d8146 RISC-V: Fix avl-type operand index error for ZVBC
+4d31d6606201b339825c370c2e1969b2dcd17f39 RISC-V: Fix testsuite
 b3cc5a1efead520bc977b4ba51f1328d01b3e516 tree-optimization/113026 - avoid vector epilog in more cases
-e50a1ed3d36dee5baee5d89126a80419b119a7c5 RISC-V: Add crypto vector builtin function.
-411b210797d139811bffa15471523162db6f5f89 RISC-V: Add crypto vector api-testing cases.
 2e4607666c3238a62d08468720549e70e71417c3 RISC-V: Fix comments of segment load/store intrinsic [NFC]
 b1d4e5b51375efd285378173375d634ad6ba8462 vect: Ensure both NITERSM1 and NITERS are INTEGER_CSTs or neither of them [PR113210]
 db584633e600840619bfb821d8293094ef26a668 RISC-V: Fix loop invariant check
@@ -3070,6 +2476,7 @@ e752a1ee00fef0244079a4c044d151e3be8073ab RISC-V: Remove unused function in riscv
 19260a04ba6f75b1fae52afab50dcb43d44eb259 RISC-V: Documnet the list of supported extensions
 54519030b05e2a85565cd65c88afe7da4670dd86 RISC-V: Update testcase due to message update
 63736351ec4d1e49261a483ea55e0f5ecfc591c8 libgccjit: Make is_int return false on vector types
+615e25c82de97acc17ab438f88d6788cf7ffe1d6 RISC-V: Suppress warning
 0366231967776653b7c297055e6eac090549310e Remove several xfails for 32-bit hppa*-*-*
 b1829de17bdf9770b276756ead49eba6f408ecd1 [committed] [NFC] Fix riscv_init_cumulative_args for unused arguments
 5efd98c6f818ce2c55f54c34008557d0a3f953aa Install right version of last change.
@@ -3120,10 +2527,6 @@ d7250c1e02478586a0cd6d5cb67bf4d17249a7e7 tree-ssa-strlen: Fix up handle_store [P
 9dd10de15b183f7b662905e1383fdc3a08755f2e RISC-V: Fix VSETLV PASS compile-time issue
 924137b9012cee5603482242de08fbf0b2030f6a tree-optimization/113670 - gather/scatter to/from hard registers
 8123f3ca3fd891034a8366518e756f161c4ff40d match: Fix vcond into conditional op folding [PR113607].
-26c34b809cd1a6249027730a8b52bbf6a1c0f4a8 RISC-V: Add non-vector types to dfa pipelines
-e56fb037d9d265682f5e7217d8a4c12a8d3fddf8 RISC-V: Add vector related pipelines
-4b799a16ae59fc0f508c5931ebf1851a3446b707 RISC-V: Use default cost model for insn scheduling
-23cd2961bd2ff63583f46e3499a07bd54491d45c RISC-V: Enable assert for insn_has_dfa_reservation
 be697c0ab187466a0a76ef228055b591718e3e4d Revert "RISC-V: Enable assert for insn_has_dfa_reservation"
 017b4c2a4977a8e50a336e4fef8c4ef817765033 Revert "RISC-V: Use default cost model for insn scheduling"
 2a30dd3a763a3a5f517bd923607b6081157eeaac Revert "RISC-V: Add vector related pipelines"
@@ -3180,17 +2583,13 @@ d70facd54a576faca1bfba96e92e1475e0da22a3 analyzer: Fix maybe_undo_optimize_bit_f
 ecfcc362b7f3f796c72f3525c4e3a6dd8ab3beac testsuite: Fix up analyzer/torture/vector-extract-1.c test for i686 [PR113983]
 c8742849e22d004b6ab94b3f573639f763e42e3a ipa: Convert lattices from pure array to vector (PR 113476)
 3232ebd91ed55b275b9d5a6e8355336382c4afd5 RISC-V: Specify mtune and march for PR113742
-57b95223cb0ee472c86b34fc79d1193f3561451d RISC-V: Add non-vector types to dfa pipelines
-6ec84c45a19403d3435b2affe4ec60e518fc1f97 RISC-V: Add vector related pipelines
-67a29f99cc81384b9245ac5997e47bcf3ff84545 RISC-V: Use default cost model for insn scheduling
 bc6b42666cfe1467774b942c7afabe480e3b5ccb RISC-V: Quick and simple fixes to testcases that break due to reordering
-d7d79c466dd4f2763974cc33545275fa37cafc1f RISC-V: Enable assert for insn_has_dfa_reservation
 9ca4c1bf082a4691482ca9f4814fea68f04e2cb3 RISC-V: Add tests for constraints "i" and "s"
 3688c2b1a604a16b9ff46935770976960016b15c RISC-V: Upgrade RVV intrinsic version to 0.12
 549f251f055e3a0b0084189a3012c4f15d635e75 tree-optimization/114027 - conditional reduction chain
 1c5da882bf77400748aeb0b01bf9a7faba1a4f32 doc: RISC-V: Document that -mcpu doesn't override -march or -mtune
 23f5da91ccb4927562ea4d1c245639bfd4a0088b RISC-V: Point our Python scripts at python3
-818094a07a0b550643ecd0090647dc29cc9e153a testsuite: vect: Actually skip  gcc.dg/vect/vect-bic-bitmask-12.c etc. on SPARC
+818094a07a0b550643ecd0090647dc29cc9e153a testsuite: vect: Actually skip gcc.dg/vect/vect-bic-bitmask-12.c etc. on SPARC
 85c12ae8b80902ed46c97f33dbb61533e07f2905 RISC-V: Fix vec_init for simple sequences [PR114028].
 5e7a176e88a2a37434cef9b1b6a37a4f8274854a bitint: Handle VIEW_CONVERT_EXPRs between large/huge BITINT_TYPEs and VECTOR/COMPLEX_TYPE etc. [PR114073]
 0394ae31e832c5303f3b4aad9c66710a30c097f0 vect: Tighten check for impossible SLP layouts [PR113205]
